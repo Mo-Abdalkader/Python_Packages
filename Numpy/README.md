@@ -35,15 +35,25 @@ In the field of Artificial Intelligence (AI), NumPy is indispensable for various
 
 NumPy's versatility and performance make it a cornerstone of AI development, enabling researchers and practitioners to efficiently implement and experiment with various algorithms and models.
 
+***
 
 ## Common NumPy Functions:
 
-### numpy.array()
+### Array Creation:
+- np.array()
+- np.zeros()
+- np.ones()
+- np.empty()
+- np.arange()
+- np.linspace()
+- np.eye()
+
+#### 1- numpy.array()
 
 #### Explanation:
 `numpy.array()` is used to create a NumPy array from a Python list or tuple.
 
-#### Python Code:
+##### Python Code:
 ```python
 import numpy as np
 
@@ -51,4 +61,8 @@ import numpy as np
 my_list = [1, 2, 3, 4, 5]
 my_array = np.array(my_list)
 print(my_array)
+```
+##### Output:
+```plaintext
+[1 2 3 4 5]
 ```
