@@ -48,14 +48,13 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linspace()
 7. np.eye()
 
-#### 1- numpy.array()
-`numpy.array()` is used to create a NumPy array from a Python list or tuple.
+#### 1- np.array()
+Creating a NumPy array from a Python list or tuple.
 
 ##### Python Code:
 ```python
 import numpy as np
 
-# Create a NumPy array from a Python list
 my_list = [1, 2, 3, 4, 5]
 my_array = np.array(my_list)
 print(my_array)
@@ -64,3 +63,117 @@ print(my_array)
 ```plaintext
 [1 2 3 4 5]
 ```
+
+#### 2- np.zeros()
+Creating an array of zeros with a specified shape
+
+##### Python Code:
+```python
+import numpy as np
+
+zeros_array = np.zeros((3, 4))
+print(zeros_array)
+```
+##### Output:
+```plaintext
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+```
+
+#### 3- np.ones()
+Creating an array of ones with a specified shape
+
+##### Python Code:
+```python
+import numpy as np
+
+ones_array = np.ones((4, 2))
+print(ones_array)
+```
+##### Output:
+```plaintext
+[[1. 1.]
+ [1. 1.]
+ [1. 1.]
+ [1. 1.]]
+```
+
+#### 4- np.empty()
+Creating an uninitialized array with a specified shape
+
+##### Python Code:
+```python
+import numpy as np
+
+empty_array = np.empty((3, 2))
+print(empty_array)
+```
+##### Output:
+```plaintext
+[[1.04591558e-311 1.04591557e-311]
+ [1.04591558e-311 1.04591558e-311]
+ [1.04591558e-311 1.04591558e-311]]
+```
+
+#### 5- np.arange()
+Creating an array of evenly spaced values within a given range
+
+##### Python Code:
+```python
+import numpy as np
+
+range_array = np.arange(0, 10, 2)  # Start, stop (exclusive), step
+print(range_array)
+```
+##### Output:
+```plaintext
+[0 2 4 6 8]
+```
+
+#### 6- np.linspace()
+Creating an array of evenly spaced numbers over a specified interval
+
+##### Python Code:
+```python
+import numpy as np
+
+linspace_array = np.linspace(0, 1, 5)  # Start, stop, number of points
+print(linspace_array)
+```
+##### Output:
+```plaintext
+[0.  0.25  0.5  0.75  1.  ]
+```
+
+##### Python Code:
+```python
+import numpy as np
+
+linspace_array = np.linspace(1, 5, 9)  # Start, stop, number of points
+print(linspace_array)
+```
+##### Output:
+```plaintext
+[1.  1.5  2.  2.5  3.  3.5  4.  4.5  5. ]
+```
+
+#### 7- np.eye()
+Creating a 2-D identity matrix (diagonal array of ones)
+
+##### Python Code:
+```python
+import numpy as np
+
+identity_matrix = np.eye(5)
+print(identity_matrix)
+```
+##### Output:
+```plaintext
+[[1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+```
+***
