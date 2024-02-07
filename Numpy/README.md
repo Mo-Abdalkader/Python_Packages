@@ -39,7 +39,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 
 ## Common NumPy Functions:
 
-### Array Creation:
+### 1- Array Creation:
 1. np.array()
 2. np.zeros()
 3. np.ones()
@@ -48,10 +48,20 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linspace()
 7. np.eye()
 
+## 2- Random Number Generation:
+1. np.random.rand()
+2. np.random.randn()
+3. np.random.randint()
+4. np.random.choice()
+5. np.random.shuffle()
+
+***
+### 1- Array Creation:
+
 #### 1- np.array()
 Creating a NumPy array from a Python list or tuple.
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
@@ -63,11 +73,13 @@ print(my_array)
 ```plaintext
 [1 2 3 4 5]
 ```
+
 ---
+
 #### 2- np.zeros()
 Creating an array of zeros with a specified shape
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
@@ -84,7 +96,7 @@ print(zeros_array)
 #### 3- np.ones()
 Creating an array of ones with a specified shape
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
@@ -102,7 +114,7 @@ print(ones_array)
 #### 4- np.empty()
 Creating an uninitialized array with a specified shape
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
@@ -119,7 +131,7 @@ print(empty_array)
 #### 5- np.arange()
 Creating an array of evenly spaced values within a given range
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
@@ -134,7 +146,7 @@ print(range_array)
 #### 6- np.linspace()
 Creating an array of evenly spaced numbers over a specified interval
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
@@ -146,7 +158,7 @@ print(linspace_array)
 [0.  0.25  0.5  0.75  1.  ]
 ```
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
@@ -161,7 +173,7 @@ print(linspace_array)
 #### 7- np.eye()
 Creating a 2-D identity matrix (diagonal array of ones)
 
-##### Python Code:
+##### Code:
 ```python
 import numpy as np
 
