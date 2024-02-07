@@ -69,8 +69,15 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 11. np.tan()
 12. np.exp()
 13. np.log()
+14. np.sqrt()
+15. np.square()
+16. np.add()
+17. np.subtract()
+18. np.multiply()
+19. np.divide()
+20. np.dot()
 
-### 4-Array Manipulation:
+### 4- Array Manipulation:
 1. np.reshape()
 2. np.ravel()
 3. np.transpose()
@@ -79,81 +86,82 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.hstack()
 7. np.vstack()
 
-### Linear Algebra:
-numpy.dot()
-numpy.matmul()
-numpy.linalg.inv()
-numpy.linalg.det()
-numpy.linalg.eig()
-numpy.linalg.solve()
-numpy.linalg.lstsq()
+### 5- Linear Algebra:
+1. np.dot()
+2. np.matmul()
+3. np.linalg.inv()
+4. np.linalg.det()
+5. np.linalg.eig()
+6. np.linalg.solve()
+7. np.linalg.lstsq()
 
-### Array Comparison and Boolean Operations:
-numpy.equal()
-numpy.not_equal()
-numpy.logical_and()
-numpy.logical_or()
-numpy.logical_not()
-numpy.all()
-numpy.any()
+### 6- Array Comparison and Boolean Operations:
+1. np.equal()
+2. np.not_equal()
+3. np.logical_and()
+4. np.logical_or()
+5. np.logical_not()
+6. np.all()
+7. np.any()
 
-### Array Indexing and Slicing:
-numpy.take()
-numpy.put()
-numpy.argmax()
-numpy.argmin()
-numpy.where()
-numpy.extract()
+### 7- Array Indexing and Slicing:
+1. np.take()
+2. np.put()
+3. np.argmax()
+4. np.argmin()
+5. np.where()
+6. np.extract()
 
-### Array Iteration:
-numpy.nditer()
-numpy.ndenumerate()
-numpy.ndindex()
+### 8- Array Iteration:
+1. np.nditer()
+2. np.ndenumerate()
+3. np.ndindex()
 
-### Array Sorting and Searching:
-numpy.sort()
-numpy.argsort()
-numpy.searchsorted()
+### 9- Array Sorting and Searching:
+1. np.sort()
+2. np.argsort()
+3. np.searchsorted()
 
-### Array Set Operations:
-numpy.unique()
-numpy.intersect1d()
-numpy.union1d()
-numpy.setdiff1d()
+### 10- Array Set Operations:
+1. np.unique()
+2. np.intersect1d()
+3. np.union1d()
+4. np.setdiff1d()
 
-### File Input and Output:
-numpy.loadtxt()
-numpy.genfromtxt()
-numpy.savetxt()
+### 11- File Input and Output:
+1. np.loadtxt()
+2. np.genfromtxt()
+3. np.savetxt()
 
-### Array Reshaping and Resizing:
-numpy.resize()
-numpy.expand_dims()
-numpy.squeeze()
-numpy.swapaxes()
+### 12- Array Reshaping and Resizing:
+1. np.resize()
+2. np.expand_dims()
+3. np.squeeze()
+4. np.swapaxes()
 
-### Polynomial Functions:
-numpy.poly()
-numpy.polyval()
-numpy.polyfit()
-numpy.roots()
+### 13- Polynomial Functions:
+1. np.poly()
+2. np.polyval()
+3. np.polyfit()
+4. np.roots()
 
-### Statistical Functions:
-numpy.histogram()
-numpy.bincount()
-numpy.percentile()
-numpy.corrcoef()
+### 14- Statistical Functions:
+1. np.histogram()
+2. np.bincount()
+3. np.percentile()
+4. np.corrcoef()
 
-### Fourier Transformations:
-numpy.fft.fft()
-numpy.fft.ifft()
-numpy.fft.fftfreq()
+### 15- Fourier Transformations:
+1. np.fft.fft()
+2. np.fft.ifft()
+3. np.fft.fftfreq()
 
-### Other Utilities:
-numpy.zeros_like()
-numpy.ones_like()
-numpy.empty_like()
-numpy.copy()
+### 16- Other Utilities:
+1. np.zeros_like()
+2. np.ones_like()
+3. np.empty_like()
+4. np.copy()
+
 
 
 ***
