@@ -48,14 +48,117 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linspace()
 7. np.eye()
 
-## 2- Random Number Generation:
+### 2- Random Number Generation:
 1. np.random.rand()
 2. np.random.randn()
 3. np.random.randint()
 4. np.random.choice()
 5. np.random.shuffle()
 
+### 3- Mathematical Functions:
+1. np.sum()
+2. np.mean()
+3. np.std()
+4. np.var()
+5. np.min()
+6. np.max()
+7. np.argmin()
+8. np.argmax()
+9. np.sin()
+10. np.cos()
+11. np.tan()
+12. np.exp()
+13. np.log()
+
+### 4-Array Manipulation:
+1. np.reshape()
+2. np.ravel()
+3. np.transpose()
+4. np.concatenate()
+5. np.split()
+6. np.hstack()
+7. np.vstack()
+
+### Linear Algebra:
+numpy.dot()
+numpy.matmul()
+numpy.linalg.inv()
+numpy.linalg.det()
+numpy.linalg.eig()
+numpy.linalg.solve()
+numpy.linalg.lstsq()
+
+### Array Comparison and Boolean Operations:
+numpy.equal()
+numpy.not_equal()
+numpy.logical_and()
+numpy.logical_or()
+numpy.logical_not()
+numpy.all()
+numpy.any()
+
+### Array Indexing and Slicing:
+numpy.take()
+numpy.put()
+numpy.argmax()
+numpy.argmin()
+numpy.where()
+numpy.extract()
+
+### Array Iteration:
+numpy.nditer()
+numpy.ndenumerate()
+numpy.ndindex()
+
+### Array Sorting and Searching:
+numpy.sort()
+numpy.argsort()
+numpy.searchsorted()
+
+### Array Set Operations:
+numpy.unique()
+numpy.intersect1d()
+numpy.union1d()
+numpy.setdiff1d()
+
+### File Input and Output:
+numpy.loadtxt()
+numpy.genfromtxt()
+numpy.savetxt()
+
+### Array Reshaping and Resizing:
+numpy.resize()
+numpy.expand_dims()
+numpy.squeeze()
+numpy.swapaxes()
+
+### Polynomial Functions:
+numpy.poly()
+numpy.polyval()
+numpy.polyfit()
+numpy.roots()
+
+### Statistical Functions:
+numpy.histogram()
+numpy.bincount()
+numpy.percentile()
+numpy.corrcoef()
+
+### Fourier Transformations:
+numpy.fft.fft()
+numpy.fft.ifft()
+numpy.fft.fftfreq()
+
+### Other Utilities:
+numpy.zeros_like()
+numpy.ones_like()
+numpy.empty_like()
+numpy.copy()
+
+
 ***
+***
+
 ### 1- Array Creation:
 
 #### 1- np.array()
@@ -73,9 +176,7 @@ print(my_array)
 ```plaintext
 [1 2 3 4 5]
 ```
-
 ---
-
 #### 2- np.zeros()
 Creating an array of zeros with a specified shape
 
