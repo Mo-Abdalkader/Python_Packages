@@ -40,17 +40,15 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 ## Common NumPy Functions:
 
 ### Array Creation:
-- np.array()
-- np.zeros()
-- np.ones()
-- np.empty()
-- np.arange()
-- np.linspace()
-- np.eye()
+1. np.array()
+2. np.zeros()
+3. np.ones()
+4. np.empty()
+5. np.arange()
+6. np.linspace()
+7. np.eye()
 
 #### 1- numpy.array()
-
-#### Explanation:
 `numpy.array()` is used to create a NumPy array from a Python list or tuple.
 
 ##### Python Code:
