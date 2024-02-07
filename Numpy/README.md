@@ -34,3 +34,21 @@ In the field of Artificial Intelligence (AI), NumPy is indispensable for various
 - **Data visualization:** NumPy arrays can be easily integrated with libraries like Matplotlib to visualize data distributions and model predictions.
 
 NumPy's versatility and performance make it a cornerstone of AI development, enabling researchers and practitioners to efficiently implement and experiment with various algorithms and models.
+
+
+## Common NumPy Functions:
+
+### numpy.array()
+
+#### Explanation:
+`numpy.array()` is used to create a NumPy array from a Python list or tuple.
+
+#### Python Code:
+```python
+import numpy as np
+
+# Create a NumPy array from a Python list
+my_list = [1, 2, 3, 4, 5]
+my_array = np.array(my_list)
+print(my_array)
+```
