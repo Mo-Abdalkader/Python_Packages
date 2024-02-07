@@ -63,7 +63,7 @@ print(my_array)
 ```plaintext
 [1 2 3 4 5]
 ```
-
+---
 #### 2- np.zeros()
 Creating an array of zeros with a specified shape
 
@@ -80,7 +80,7 @@ print(zeros_array)
  [0. 0. 0. 0.]
  [0. 0. 0. 0.]]
 ```
-
+---
 #### 3- np.ones()
 Creating an array of ones with a specified shape
 
@@ -98,7 +98,7 @@ print(ones_array)
  [1. 1.]
  [1. 1.]]
 ```
-
+---
 #### 4- np.empty()
 Creating an uninitialized array with a specified shape
 
@@ -115,7 +115,7 @@ print(empty_array)
  [1.04591558e-311 1.04591558e-311]
  [1.04591558e-311 1.04591558e-311]]
 ```
-
+---
 #### 5- np.arange()
 Creating an array of evenly spaced values within a given range
 
@@ -130,7 +130,7 @@ print(range_array)
 ```plaintext
 [0 2 4 6 8]
 ```
-
+---
 #### 6- np.linspace()
 Creating an array of evenly spaced numbers over a specified interval
 
@@ -157,7 +157,7 @@ print(linspace_array)
 ```plaintext
 [1.  1.5  2.  2.5  3.  3.5  4.  4.5  5. ]
 ```
-
+---
 #### 7- np.eye()
 Creating a 2-D identity matrix (diagonal array of ones)
 
