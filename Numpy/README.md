@@ -39,7 +39,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 
 ## Common NumPy Functions:
 
-### 1- Array Creation:
+### [Array Creation:](Array Creation)
 1. np.array()
 2. np.zeros()
 3. np.ones()
@@ -48,18 +48,20 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linspace()
 7. np.eye()
 
-### 2- Random Number Generation:
+### [Random Number Generation:](Random Number Generation)
 1. np.random.rand()
 2. np.random.randn()
-3. np.random.randint()
-4. np.random.choice()
-5. np.random.shuffle()
+3. np.random.random()
+4. np.random.random_sample()
+5. np.random.randint()
+6. np.random.choice()
+7. np.random.shuffle()
 
-### 3- Mathematical Functions:
+### [Mathematical Functions:](Mathematical Functions)
 1. np.sum()
 2. np.mean()
-3. np.std()
-4. np.var()
+3. np.var()
+4. np.std()
 5. np.min()
 6. np.max()
 7. np.argmin()
@@ -77,7 +79,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 19. np.divide()
 20. np.dot()
 
-### 4- Array Manipulation:
+### Array Manipulation:
 1. np.reshape()
 2. np.ravel()
 3. np.transpose()
@@ -86,7 +88,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.hstack()
 7. np.vstack()
 
-### 5- Linear Algebra:
+### Linear Algebra:
 1. np.dot()
 2. np.matmul()
 3. np.linalg.inv()
@@ -95,7 +97,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linalg.solve()
 7. np.linalg.lstsq()
 
-### 6- Array Comparison and Boolean Operations:
+### Array Comparison and Boolean Operations:
 1. np.equal()
 2. np.not_equal()
 3. np.logical_and()
@@ -104,7 +106,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.all()
 7. np.any()
 
-### 7- Array Indexing and Slicing:
+### Array Indexing and Slicing:
 1. np.take()
 2. np.put()
 3. np.argmax()
@@ -112,51 +114,51 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 5. np.where()
 6. np.extract()
 
-### 8- Array Iteration:
+### Array Iteration:
 1. np.nditer()
 2. np.ndenumerate()
 3. np.ndindex()
 
-### 9- Array Sorting and Searching:
+### Array Sorting and Searching:
 1. np.sort()
 2. np.argsort()
 3. np.searchsorted()
 
-### 10- Array Set Operations:
+### Array Set Operations:
 1. np.unique()
 2. np.intersect1d()
 3. np.union1d()
 4. np.setdiff1d()
 
-### 11- File Input and Output:
+### File Input and Output:
 1. np.loadtxt()
 2. np.genfromtxt()
 3. np.savetxt()
 
-### 12- Array Reshaping and Resizing:
+### Array Reshaping and Resizing:
 1. np.resize()
 2. np.expand_dims()
 3. np.squeeze()
 4. np.swapaxes()
 
-### 13- Polynomial Functions:
+### Polynomial Functions:
 1. np.poly()
 2. np.polyval()
 3. np.polyfit()
 4. np.roots()
 
-### 14- Statistical Functions:
+### Statistical Functions:
 1. np.histogram()
 2. np.bincount()
 3. np.percentile()
 4. np.corrcoef()
 
-### 15- Fourier Transformations:
+### Fourier Transformations:
 1. np.fft.fft()
 2. np.fft.ifft()
 3. np.fft.fftfreq()
 
-### 16- Other Utilities:
+### Other Utilities:
 1. np.zeros_like()
 2. np.ones_like()
 3. np.empty_like()
@@ -167,7 +169,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 ***
 ***
 
-### 1- Array Creation:
+### Array Creation:
 
 #### 1- np.array()
 Creating a NumPy array from a Python list or tuple.
@@ -298,3 +300,551 @@ print(identity_matrix)
  [0. 0. 0. 0. 1.]]
 ```
 ***
+
+| Function       | Description                                                | Syntax                                      |
+|----------------|------------------------------------------------------------|---------------------------------------------|
+| `np.array()`   | Create an array from a Python list or array-like object.   | `np.array(object, dtype=None, copy=True)`  |
+| `np.zeros()`   | Create an array filled with zeros.                         | `np.zeros(shape, dtype=float, order='C')`  |
+| `np.ones()`    | Create an array filled with ones.                          | `np.ones(shape, dtype=None, order='C')`    |
+| `np.empty()`   | Create an uninitialized array.                             | `np.empty(shape, dtype=float, order='C')`  |
+| `np.arange()`  | Create an array with evenly spaced values within a range.  | `np.arange(start, stop, step, dtype=None)` |
+| `np.linspace()`| Create an array with evenly spaced numbers over a specified interval.| `np.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)`|
+| `np.eye()`     | Create a 2-D identity matrix (diagonal array of ones).     | `np.eye(N, M=None, k=0, dtype=float)`      |
+
+***
+***
+
+### Random Number Generation:
+
+
+#### 1- np.random.rand()
+Generates random values in a given shape from a uniform distribution over [0, 1).
+
+##### Code:
+```python
+import numpy as np
+
+random_array = np.random.rand(2, 3, 2)
+print(random_array)
+```
+##### Output:
+```plaintext
+[[[0.59439737 0.04203605]
+  [0.89240467 0.95026019]]
+
+ [[0.53163278 0.41530542]
+  [0.87641794 0.48819283]]]
+```
+***
+#### 2- np.random.randn()
+Generate random values from the standard normal distribution
+
+##### Code:
+```python
+import numpy as np
+
+random_array = np.random.randn(2, 3)
+print(random_array)
+```
+##### Output:
+```plaintext
+[[-0.79327957  0.88652359  1.30526375]
+ [-1.03018159  1.3886636  -1.36125316]]
+```
+***
+#### 3- np.random.random()
+Generate a random float between 0 and 1
+
+##### Code:
+```python
+import numpy as np
+
+random_value = np.random.random((2, 3))
+print(random_value)
+```
+##### Output:
+```plaintext
+[[0.42872708 0.7385717  0.16628425]
+ [0.04095093 0.03574836 0.99828977]]
+```
+***
+#### 4. np.random.random_sample()
+Generate a random float between 0 and 1
+
+##### Code:
+```python
+import numpy as np
+
+random_value = np.random.random_sample((2, 2))
+print(random_value)
+```
+##### Output:
+```plaintext
+[[0.76578554 0.94115212]
+ [0.5710084  0.76463451]]
+```
+***
+#### 5. np.random.randint()
+Generates random integers from a specified low (inclusive) to high (exclusive) range.
+
+##### Code1:
+```python
+import numpy as np
+
+random_value = np.random.randint(1, 5)                # Generate a random integer number from 1 to 4 | NOTE : By default size = 1
+print(random_value)
+```
+##### Output1:
+```plaintext
+3
+```
+
+##### Code2:
+```python
+import numpy as np
+
+random_array = np.random.randint(1, 100, size=(2, 2)) # Generate random integer numbers from 1 to 99
+print(random_array)
+```
+##### Output2:
+```plaintext
+[[38 56]
+ [ 4 29]]
+```
+
+***
+#### 6. np.random.choice()
+Generates a random sample from a given 1-D array.
+
+##### Code:
+```python
+import numpy as np
+
+my_list = ['Mohamed', 'Abdalkader', 'Abdalsalam', 'Numpy', 'Python']
+random_choice = np.random.choice(my_list)
+print(random_choice)
+```
+##### Output:
+```plaintext
+Mohamed
+```
+***
+#### 7. np.random.shuffle()
+Shuffles the contents of a sequence in place.
+
+##### Code:
+```python
+import numpy as np
+
+my_array = np.arange(10)
+print(f"Ordered Array  : {my_array}")
+
+np.random.shuffle(my_array)
+print(f"Shuffled Array : {my_array}")
+```
+##### Output:
+```plaintext
+Ordered Array  : [0 1 2 3 4 5 6 7 8 9]
+Shuffled Array : [0 8 7 9 3 6 4 5 1 2]
+```
+***
+
+| Function                      | Description                                                               | Syntax                                                             |
+|-------------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------|
+| `np.random.rand()`            | Generate random values in a given shape from a uniform distribution over [0, 1).| `np.random.rand(d0, d1, ..., dn)`                              |
+| `np.random.randn()`           | Return a sample (or samples) from the "standard normal" distribution.     | `np.random.randn(d0, d1, ..., dn)`                             |
+| `np.random.random()`         | Generate random floats in the half-open interval [0.0, 1.0).               | `np.random.random(size=None)`                                    |
+| `np.random.random_sample()`   | Same as `np.random.random()`.                                             | `np.random.random_sample(size=None)`                             |
+| `np.random.randint()`        | Return random integers from low (inclusive) to high (exclusive).          | `np.random.randint(low, high=None, size=None, dtype='l')`         |
+| `np.random.choice()`         | Generate a random sample from a given 1-D array.                          | `np.random.choice(a, size=None, replace=True, p=None)`            |
+| `np.random.shuffle()`        | Modify a sequence in-place by shuffling its contents.                     | `np.random.shuffle(x)`                                            |
+
+
+***
+***
+### Mathematical Functions:
+
+#### 1. np.sum()
+Computes the sum of array elements over a given axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the sum of all elements
+total_sum = np.sum(arr)
+print("Total Sum   =", total_sum)
+
+# Compute the sum along the rows (axis=0)
+row_sum = np.sum(arr, axis=0)
+print("Rows Sum    =", row_sum)
+
+# Compute the sum along the columns (axis=1)
+col_sum = np.sum(arr, axis=1)
+print("Columns Sum =", col_sum)
+```
+##### Output:
+```plaintext
+Total Sum   = 10
+Rows Sum    = [4 6]
+Columns Sum = [3 7]
+```
+***
+#### 2. np.mean()
+Computes the arithmetic mean along the specified axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the mean of all elements
+mean = np.mean(arr)
+print("Total mean   =", mean)
+
+# Compute the mean along the rows (axis=0)
+row_mean = np.mean(arr, axis=0)
+print("Rows mean    =", row_mean)
+
+# Compute the mean along the columns (axis=1)
+col_mean = np.mean(arr, axis=1)
+print("Columns mean =", col_mean)
+```
+##### Output:
+```plaintext
+Total mean   = 2.5
+Rows mean    = [2. 3.]
+Columns mean = [1.5 3.5]
+```
+***
+#### 3. np.var()
+Computes the variance along the specified axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the variance of all elements
+mean = np.var(arr)
+print("Total variance   =", mean)
+
+# Compute the variance along the rows (axis=0)
+row_mean = np.var(arr, axis=0)
+print("Rows variance    =", row_mean)
+
+# Compute the variance along the columns (axis=1)
+col_mean = np.var(arr, axis=1)
+print("Columns variance =", col_mean)
+```
+##### Output:
+```plaintext
+Total variance   = 1.25
+Rows variance    = [1. 1.]
+Columns variance = [0.25 0.25]
+```
+***
+#### 4. np.std()
+Computes the standard deviation along the specified axis.
+ 
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the standard deviation of all elements
+mean = np.std(arr)
+print("Total standard deviation   =", mean)
+
+# Compute the standard deviation along the rows (axis=0)
+row_mean = np.std(arr, axis=0)
+print("Rows standard deviation    =", row_mean)
+
+# Compute the standard deviation along the columns (axis=1)
+col_mean = np.std(arr, axis=1)
+print("Columns standard deviation =", col_mean)
+```
+##### Output:
+```plaintext
+Total standard deviation   = 1.118033988749895
+Rows standard deviation    = [1. 1.]
+Columns standard deviation = [0.5 0.5]
+```
+***
+#### 5. np.min()
+Computes the minimum value along the specified axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the minimum of all elements
+mean = np.min(arr)
+print("Total Minimum   =", mean)
+
+# Compute the minimum along the rows (axis=0)
+row_mean = np.min(arr, axis=0)
+print("Rows Minimum    =", row_mean)
+
+# Compute the minimum along the columns (axis=1)
+col_mean = np.min(arr, axis=1)
+print("Columns Minimum =", col_mean)
+```
+##### Output:
+```plaintext
+Total Minimum   = 1
+Rows Minimum    = [1 2]
+Columns Minimum = [1 3]
+```
+***
+#### 6. np.max()
+Computes the maximum value along the specified axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the maximum of all elements
+mean = np.max(arr)
+print("Total Maximum   =", mean)
+
+# Compute the maximum along the rows (axis=0)
+row_mean = np.max(arr, axis=0)
+print("Rows Maximum    =", row_mean)
+
+# Compute the maximum along the columns (axis=1)
+col_mean = np.max(arr, axis=1)
+print("Columns Maximum =", col_mean)
+```
+##### Output:
+```plaintext
+Total Maximum   = 4
+Rows Maximum    = [3 4]
+Columns Maximum = [2 4]
+```
+***
+#### 7. np.argmin()
+Computes the indices of the minimum values along the specified axis.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 8. np.argmax()
+Computes the indices of the maximum values along the specified axis.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 9. np.sin()
+Computes the sine of the input array.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 10. np.cos()
+Computes the cosine of the input array.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 11. np.tan()
+Computes the tangent of the input array.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 12. np.exp()
+Computes the exponential of the input array.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 13. np.log()
+Computes the natural logarithm of the input array.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 14. np.sqrt()
+Computes the non-negative square root of the input array.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 15. np.square()
+Computes the square of the input array. 
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 16. np.add()
+Adds arguments element-wise.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 17. np.subtract()
+Subtracts arguments element-wise.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 18. np.multiply()
+Multiplies arguments element-wise.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 19. np.divide()
+Returns a true division of the inputs, element-wise.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 20. np.dot()
+Dot product of two arrays.
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+
+| Function        | Description                                                       | Syntax                                      |
+|-----------------|-------------------------------------------------------------------|---------------------------------------------|
+| `np.sum()`      | Computes the sum of array elements over a given axis.             | `np.sum(a, axis=None, dtype=None, keepdims=False, initial=0)`  |
+| `np.mean()`     | Computes the arithmetic mean along the specified axis.            | `np.mean(a, axis=None, dtype=None, out=None, keepdims=False)` |
+| `np.var()`      | Computes the variance along the specified axis.                   | `np.var(a, axis=None, dtype=None, out=None, ddof=0, keepdims=False)` |
+| `np.std()`      | Computes the standard deviation along the specified axis.         | `np.std(a, axis=None, dtype=None, out=None, ddof=0, keepdims=False)` |
+| `np.min()`      | Computes the minimum value along the specified axis.              | `np.min(a, axis=None, out=None, keepdims=False, initial=<no value>, where=True)` |
+| `np.max()`      | Computes the maximum value along the specified axis.              | `np.max(a, axis=None, out=None, keepdims=False, initial=<no value>, where=True)` |
+| `np.argmin()`   | Computes the indices of the minimum values along the specified axis. | `np.argmin(a, axis=None, out=None)` |
+| `np.argmax()`   | Computes the indices of the maximum values along the specified axis. | `np.argmax(a, axis=None, out=None)` |
+| `np.sin()`      | Computes the sine of the input array.                             | `np.sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.cos()`      | Computes the cosine of the input array.                           | `np.cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.tan()`      | Computes the tangent of the input array.                          | `np.tan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.exp()`      | Computes the exponential of the input array.                      | `np.exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.log()`      | Computes the natural logarithm of the input array.                | `np.log(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.sqrt()`     | Computes the non-negative square root of the input array.         | `np.sqrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.square()`   | Computes the square of the input array.                           | `np.square(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.add()`      | Adds arguments element-wise.                                       | `np.add(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.subtract()` | Subtracts arguments element-wise.                                  | `np.subtract(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.multiply()` | Multiplies arguments element-wise.                                 | `np.multiply(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.divide()`   | Returns a true division of the inputs, element-wise.               | `np.divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])` |
+| `np.dot()`      | Dot product of two arrays.                                        | `np.dot(a, b, out=None)`                   |
+
+***
+***
+
+#### 
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+
+
+
+
+
