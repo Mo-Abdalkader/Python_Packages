@@ -39,7 +39,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 
 ## Common NumPy Functions:
 
-### [Array Creation:](#Array Creation)
+### [Array Creation:](#array-creation)
 1. np.array()
 2. np.zeros()
 3. np.ones()
