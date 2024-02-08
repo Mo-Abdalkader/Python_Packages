@@ -39,7 +39,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 
 ## Common NumPy Functions:
 
-### [Array Creation:](#array-creation)
+### [Array Creation](#array-creation:)
 1. np.array()
 2. np.zeros()
 3. np.ones()
@@ -48,7 +48,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linspace()
 7. np.eye()
 
-### [Random Number Generation:](#Random Number Generation)
+### [Random Number Generation](#Random-Number-Generation:)
 1. np.random.rand()
 2. np.random.randn()
 3. np.random.random()
@@ -57,7 +57,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.random.choice()
 7. np.random.shuffle()
 
-### [Mathematical Functions:](#Mathematical Functions)
+### [Mathematical Functions](#Mathematical-Functions:)
 1. np.sum()
 2. np.mean()
 3. np.var()
