@@ -476,21 +476,21 @@ arr = np.array([[1, 2], [3, 4]])
 
 # Compute the sum of all elements
 total_sum = np.sum(arr)
-print("Total Sum   =", total_sum)
+print("Sum (Total)   =", total_sum)
 
-# Compute the sum along the rows (axis=0)
-row_sum = np.sum(arr, axis=0)
-print("Rows Sum    =", row_sum)
+# Compute the sum along the columns (axis=0)
+col_sum = np.sum(arr, axis=0)
+print("Sum (Columns) =", col_sum)
 
-# Compute the sum along the columns (axis=1)
-col_sum = np.sum(arr, axis=1)
-print("Columns Sum =", col_sum)
+# Compute the sum along the rows (axis=1)
+row_sum = np.sum(arr, axis=1)
+print("Sum (Rows)    =", row_sum)
 ```
 ##### Output:
 ```plaintext
-Total Sum   = 10
-Rows Sum    = [4 6]
-Columns Sum = [3 7]
+Sum (Total)   = 10
+Sum (Columns) = [4 6]
+Sum (Rows)    = [3 7]
 ```
 ***
 #### 2. np.mean()
@@ -505,21 +505,21 @@ arr = np.array([[1, 2], [3, 4]])
 
 # Compute the mean of all elements
 mean = np.mean(arr)
-print("Total mean   =", mean)
+print("Mean (Total)   =", mean)
 
-# Compute the mean along the rows (axis=0)
-row_mean = np.mean(arr, axis=0)
-print("Rows mean    =", row_mean)
+# Compute the mean along the columns (axis=0)
+col_mean = np.mean(arr, axis=0)
+print("Mean (Columns) =", col_mean)
 
-# Compute the mean along the columns (axis=1)
-col_mean = np.mean(arr, axis=1)
-print("Columns mean =", col_mean)
+# Compute the mean along the rows (axis=1)
+row_mean = np.mean(arr, axis=1)
+print("Mean (Rows)    =", row_mean)
 ```
 ##### Output:
 ```plaintext
-Total mean   = 2.5
-Rows mean    = [2. 3.]
-Columns mean = [1.5 3.5]
+Mean (Total)   = 2.5
+Mean (Columns) = [2. 3.]
+Mean (Rows)    = [1.5 3.5]
 ```
 ***
 #### 3. np.var()
@@ -533,22 +533,22 @@ import numpy as np
 arr = np.array([[1, 2], [3, 4]])
 
 # Compute the variance of all elements
-mean = np.var(arr)
-print("Total variance   =", mean)
+total_variance = np.var(arr)
+print("Variance (Total)   =", total_variance)
 
-# Compute the variance along the rows (axis=0)
-row_mean = np.var(arr, axis=0)
-print("Rows variance    =", row_mean)
+# Compute the variance along the columns (axis=0)
+col_variance = np.var(arr, axis=0)
+print("Variance (Columns) =", col_variance)
 
-# Compute the variance along the columns (axis=1)
-col_mean = np.var(arr, axis=1)
-print("Columns variance =", col_mean)
+# Compute the variance along the rows (axis=1)
+row_variance = np.var(arr, axis=1)
+print("Variance (Rows)    =", row_variance)
 ```
 ##### Output:
 ```plaintext
-Total variance   = 1.25
-Rows variance    = [1. 1.]
-Columns variance = [0.25 0.25]
+Variance (Total)   = 1.25
+Variance (Columns) = [1. 1.]
+Variance (Rows)    = [0.25 0.25]
 ```
 ***
 #### 4. np.std()
@@ -562,22 +562,22 @@ import numpy as np
 arr = np.array([[1, 2], [3, 4]])
 
 # Compute the standard deviation of all elements
-mean = np.std(arr)
-print("Total standard deviation   =", mean)
+total_std = np.std(arr)
+print("Standard Deviation (Total)   =", total_std)
 
-# Compute the standard deviation along the rows (axis=0)
-row_mean = np.std(arr, axis=0)
-print("Rows standard deviation    =", row_mean)
+# Compute the standard deviation along the columns (axis=0)
+col_std = np.std(arr, axis=0)
+print("Standard Deviation (Columns) =", col_std)
 
-# Compute the standard deviation along the columns (axis=1)
-col_mean = np.std(arr, axis=1)
-print("Columns standard deviation =", col_mean)
+# Compute the standard deviation along the rows (axis=1)
+row_std = np.std(arr, axis=1)
+print("Standard Deviation (Rows)    =", row_std)
 ```
 ##### Output:
 ```plaintext
-Total standard deviation   = 1.118033988749895
-Rows standard deviation    = [1. 1.]
-Columns standard deviation = [0.5 0.5]
+Standard Deviation (Total)   = 1.118033988749895
+Standard Deviation (Columns) = [1. 1.]
+Standard Deviation (Rows)    = [0.5 0.5]
 ```
 ***
 #### 5. np.min()
@@ -591,22 +591,22 @@ import numpy as np
 arr = np.array([[1, 2], [3, 4]])
 
 # Compute the minimum of all elements
-mean = np.min(arr)
-print("Total Minimum   =", mean)
+total_min = np.min(arr)
+print("Minimum (Total)   =", total_min)
 
-# Compute the minimum along the rows (axis=0)
-row_mean = np.min(arr, axis=0)
-print("Rows Minimum    =", row_mean)
+# Compute the minimum along the columns (axis=0)
+col_min = np.min(arr, axis=0)
+print("Minimum (Columns) =", col_min)
 
-# Compute the minimum along the columns (axis=1)
-col_mean = np.min(arr, axis=1)
-print("Columns Minimum =", col_mean)
+# Compute the minimum along the rows (axis=1)
+row_min = np.min(arr, axis=1)
+print("Minimum (Rows)    =", row_min)
 ```
 ##### Output:
 ```plaintext
-Total Minimum   = 1
-Rows Minimum    = [1 2]
-Columns Minimum = [1 3]
+Minimum (Total)   = 1
+Minimum (Columns) = [1 2]
+Minimum (Rows)    = [1 3]
 ```
 ***
 #### 6. np.max()
@@ -620,22 +620,22 @@ import numpy as np
 arr = np.array([[1, 2], [3, 4]])
 
 # Compute the maximum of all elements
-mean = np.max(arr)
-print("Total Maximum   =", mean)
+total_max = np.max(arr)
+print("Maximum (Total)   =", total_max)
 
-# Compute the maximum along the rows (axis=0)
-row_mean = np.max(arr, axis=0)
-print("Rows Maximum    =", row_mean)
+# Compute the maximum along the columns (axis=0)
+col_max = np.max(arr, axis=0)
+print("Maximum (Columns) =", col_max)
 
-# Compute the maximum along the columns (axis=1)
-col_mean = np.max(arr, axis=1)
-print("Columns Maximum =", col_mean)
+# Compute the maximum along the rows (axis=1)
+row_max = np.max(arr, axis=1)
+print("Maximum (Rows)    =", row_max)
 ```
 ##### Output:
 ```plaintext
-Total Maximum   = 4
-Rows Maximum    = [3 4]
-Columns Maximum = [2 4]
+Maximum (Total)   = 4
+Maximum (Columns) = [3 4]
+Maximum (Rows)    = [2 4]
 ```
 ***
 #### 7. np.argmin()
@@ -643,11 +643,28 @@ Computes the indices of the minimum values along the specified axis.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Find the index of the minimum element
+total_min_index = np.argmin(arr)
+print("Index of Minimum (Total)     =", total_min_index)
+
+# Find the index of the minimum along the columns (axis=0)
+col_min_indices = np.argmin(arr, axis=0)
+print("Indices of Minimum (Columns) =", col_min_indices)
+
+# Find the index of the minimum along the rows (axis=1)
+row_min_indices = np.argmin(arr, axis=1)
+print("Indices of Minimum (Rows)    =", row_min_indices)
 ```
 ##### Output:
 ```plaintext
-
+Index of Minimum (Total)     = 0
+Indices of Minimum (Columns) = [0 0]
+Indices of Minimum (Rows)    = [0 0]
 ```
 ***
 #### 8. np.argmax()
@@ -655,11 +672,28 @@ Computes the indices of the maximum values along the specified axis.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Find the index of the maximum element
+total_max_index = np.argmax(arr)
+print("Index of Maximum (Total)   =", total_max_index)
+
+# Find the index of the maximum along the columns (axis=0)
+col_max_indices = np.argmax(arr, axis=0)
+print("Indices of Maximum (Columns) =", col_max_indices)
+
+# Find the index of the maximum along the rows (axis=1)
+row_max_indices = np.argmax(arr, axis=1)
+print("Indices of Maximum (Rows)    =", row_max_indices)
 ```
 ##### Output:
 ```plaintext
-
+Index of Maximum (Total)   = 3
+Indices of Maximum (Columns) = [1 1]
+Indices of Maximum (Rows)    = [1 1]
 ```
 ***
 #### 9. np.sin()
@@ -667,11 +701,19 @@ Computes the sine of the input array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[0, np.pi / 3], [np.pi / 4, np.pi / 6]])
+
+# Compute the sine of all elements
+sin_arr = np.sin(arr)
+print(sin_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[0.         0.8660254 ]
+ [0.70710678 0.5       ]]
 ```
 ***
 #### 10. np.cos()
@@ -679,11 +721,19 @@ Computes the cosine of the input array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[0, np.pi / 3], [np.pi / 4, np.pi / 6]])
+
+# Compute the cosine of all elements
+cos_arr = np.cos(arr)
+print(cos_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[1.         0.5       ]
+ [0.70710678 0.8660254 ]]
 ```
 ***
 #### 11. np.tan()
@@ -691,11 +741,19 @@ Computes the tangent of the input array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[0, np.pi/3], [np.pi/4, np.pi/6]])
+
+# Compute the tangent of all elements
+tan_arr = np.tan(arr)
+print(tan_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[0.         1.73205081]
+ [1.         0.57735027]]
 ```
 ***
 #### 12. np.exp()
@@ -703,23 +761,64 @@ Computes the exponential of the input array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the exponentials of all elements
+exp_arr = np.exp(arr)
+print(exp_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[ 2.71828183  7.3890561 ]
+ [20.08553692 54.59815003]]
 ```
 ***
-#### 13. np.log()
-Computes the natural logarithm of the input array.
+#### 13. np.log() | np.log2() | np.log10()
+`np.log()` Computes the natural logarithm of the input array.
+`np.log()` Computes the base-2 logarithm of all elements in the array.
+`np.log()` Computes the base-10 logarithm of all elements in the array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[np.e, np.e ** 3], [2, 8], [10, 1000]])
+
+# Compute the natural logarithm of all elements
+log_natural_arr = np.log(arr)
+print("Natural logarithm:")
+print(log_natural_arr)
+
+# Compute the base-2 logarithm of all elements
+log_base_2_arr = np.log2(arr)
+print("\nLogarithm base 2:")
+print(log_base_2_arr)
+
+# Compute the base-10 logarithm of all elements
+log_base_10_arr = np.log10(arr)
+print("\nLogarithm base 10:")
+print(log_base_10_arr)
 ```
 ##### Output:
 ```plaintext
+Natural logarithm:
+[[1.         3.        ]
+ [0.69314718 2.07944154]
+ [2.30258509 6.90775528]]
 
+Logarithm base 2:
+[[1.44269504 4.32808512]
+ [1.         3.        ]
+ [3.32192809 9.96578428]]
+
+Logarithm base 10:
+[[0.43429448 1.30288345]
+ [0.30103    0.90308999]
+ [1.         3.        ]]
 ```
 ***
 #### 14. np.sqrt()
@@ -727,11 +826,19 @@ Computes the non-negative square root of the input array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 4], [9, 16]])
+
+# Compute the square root of all elements
+sqrt_arr = np.sqrt(arr)
+print(sqrt_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[1. 2.]
+ [3. 4.]]
 ```
 ***
 #### 15. np.square()
@@ -739,11 +846,19 @@ Computes the square of the input array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the square of all elements
+square_arr = np.square(arr)
+print(square_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[ 1  4]
+ [ 9 16]]
 ```
 ***
 #### 16. np.add()
