@@ -96,7 +96,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linalg.solve()
 7. np.linalg.lstsq()
 
-### Array Comparison and Boolean Operations:
+### [Array Comparison and Boolean Operations](#Array-Comparison-and-Boolean-Operations-1)
 1. np.equal()
 2. np.not_equal()
 3. np.logical_and()
@@ -105,7 +105,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.all()
 7. np.any()
 
-### Array Indexing and Slicing:
+### [Array Indexing and Slicing](#Array-Indexing-and-Slicing-1)
 1. np.take()
 2. np.put()
 3. np.argmax()
@@ -113,51 +113,51 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 5. np.where()
 6. np.extract()
 
-### Array Iteration:
+### [Array Iteration](#Array-Iteration-1)
 1. np.nditer()
 2. np.ndenumerate()
 3. np.ndindex()
 
-### Array Sorting and Searching:
+### [Array Sorting and Searching](#Array-Sorting-and-Searching-1):
 1. np.sort()
 2. np.argsort()
 3. np.searchsorted()
 
-### Array Set Operations:
+### [Array Set Operations](#Array-Set-Operations-1):
 1. np.unique()
 2. np.intersect1d()
 3. np.union1d()
 4. np.setdiff1d()
 
-### File Input and Output:
+### [File Input and Output](#File-Input-and-Output-1):
 1. np.loadtxt()
 2. np.genfromtxt()
 3. np.savetxt()
 
-### Array Reshaping and Resizing:
+### [Array Reshaping and Resizing](#Array-Reshaping-and-Resizing-1):
 1. np.resize()
 2. np.expand_dims()
 3. np.squeeze()
 4. np.swapaxes()
 
-### Polynomial Functions:
+### [Polynomial Functions](#Polynomial-Functions-1):
 1. np.poly()
 2. np.polyval()
 3. np.polyfit()
 4. np.roots()
 
-### Statistical Functions:
+### [Statistical Functions](#Statistical-Functions-1):
 1. np.histogram()
 2. np.bincount()
 3. np.percentile()
 4. np.corrcoef()
 
-### Fourier Transformations:
+### [Fourier Transformations](#Fourier-Transformations-1):
 1. np.fft.fft()
 2. np.fft.ifft()
 3. np.fft.fftfreq()
 
-### Other Utilities:
+### [Other Utilities](#Other-Utilities-1):
 1. np.zeros_like()
 2. np.ones_like()
 3. np.empty_like()
@@ -1265,20 +1265,315 @@ print(x)
 [0. 1.]
 ```
 ##### Explination:
-## Solving a System of Linear Equations
+`A` represents the coefficient matrix of the system of linear equations.
+`b` represents the constant terms on the right-hand side of the equations.
 
-Given the system of linear equations:
+`np.linalg.solve(A, b)` solves the equation `Ax = b`, where `A` is the coefficient matrix and `b` is the constant vector.
+The function returns the solution `vector x`, which satisfies the equation `Ax = b`.
 
-```latex
-\begin{align*}
-2x + y &= 1 \\
-x + y &= 1
-\end{align*}
+```plaintext
+2x + 1y = 1
+1x + 1y = 1
+
+
+| 2  1 |   | x |   | 1 |
+|      | * |   | = |   |
+| 1  1 |   | y |   | 1 |
+
+
+x=0, y=1
 ```
-
 ***
 #### 7. np.linalg.lstsq()
-Description
+Computes the least-squares solution to a linear matrix equation.
+
+##### Code:
+```python
+import numpy as np
+
+# Example arrays
+A = np.array([[0, 1], [1, 1], [2, 1]])
+b = np.array([0, 1, 2])
+
+# Compute the least-squares solution
+solution = np.linalg.lstsq(A, b, rcond=None)
+print(solution)
+```
+##### Output:
+```plaintext
+(array([-0.33333333,  0.83333333]), array([], dtype=float64), 2, array([2.61803399, 1.        ]))
+```
+***
+***
+### Array Comparison and Boolean Operations:
+
+#### 1. np.equal()
+Tests element-wise equality of two arrays.
+
+##### Code:
+```python
+import numpy as np
+
+# Example arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([1, 2, 3])
+
+# Test for equality
+result = np.equal(arr1, arr2)
+print(result)
+```
+##### Output:
+```plaintext
+[True True True]
+```
+***
+#### 2. np.not_equal()
+Tests element-wise inequality of two arrays.
+
+##### Code:
+```python
+import numpy as np
+
+# Example arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([1, 0, 3])
+
+# Test for inequality
+result = np.not_equal(arr1, arr2)
+print(result)
+```
+##### Output:
+```plaintext
+[False True False]
+```
+***
+#### 3. np.logical_and()
+Computes the truth value of x1 AND x2 element-wise.
+
+##### Code:
+```python
+import numpy as np
+
+# Example arrays
+arr1 = np.array([True, True, False])
+arr2 = np.array([True, False, False])
+
+# Logical AND operation
+result = np.logical_and(arr1, arr2)
+print(result)
+```
+##### Output:
+```plaintext
+[True False False]
+```
+***
+#### 4. np.logical_or()
+Computes the truth value of x1 OR x2 element-wise.
+
+##### Code:
+```python
+import numpy as np
+
+# Example arrays
+arr1 = np.array([True, True, False])
+arr2 = np.array([True, False, False])
+
+# Logical OR operation
+result = np.logical_or(arr1, arr2)
+print(result)
+```
+##### Output:
+```plaintext
+[True  True False]
+```
+***
+#### 5. np.logical_not()
+Computes the truth value of NOT x element-wise.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([True, False, True])
+
+# Logical NOT operation
+result = np.logical_not(arr)
+print(result)
+```
+##### Output:
+```plaintext
+[False True False]
+```
+***
+#### 6. np.all()
+Tests whether all array elements along a given axis evaluate to True.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([True, True, True])
+
+# Test if all elements are True
+result = np.all(arr)
+print(result)
+```
+##### Output:
+```plaintext
+True
+```
+***
+#### 7. np.any()
+Tests whether any array element along a given axis evaluates to True.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([False, False, True])
+
+# Test if any element is True
+result = np.any(arr)
+print(result)
+```
+##### Output:
+```plaintext
+True
+```
+***
+***
+
+### Array Indexing and Slicing:
+
+#### 1. np.take()
+Returns elements from an array along an axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([4, 3, 5, 7])
+
+# Take elements at specified indices
+indices = [0, 2]
+result = np.take(arr, indices)
+print(result)
+```
+##### Output:
+```plaintext
+[4 5]
+```
+***
+#### 2. np.put()
+Replaces specified elements of an array with given values.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([1, 2, 3, 4])
+
+# Replace elements at specified indices
+indices = [0, 2]
+values = [10, 20]
+np.put(arr, indices, values)
+print(arr)
+```
+##### Output:
+```plaintext
+[10 2 20 4]
+```
+***
+#### 3. np.argmax()
+Returns the indices of the maximum values along an axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([3, 1, 5, 2, 7])
+
+# Find the index of the maximum value
+index = np.argmax(arr)
+print(index)
+```
+##### Output:
+```plaintext
+4
+```
+***
+#### 4. np.argmin()
+Returns the indices of the minimum values along an axis.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([3, 1, 5, 2, 7])
+
+# Find the index of the minimum value
+index = np.argmin(arr)
+print(index)
+```
+##### Output:
+```plaintext
+1
+```
+***
+#### 5. np.where()
+Return elements chosen from x or y depending on condition.
+
+##### Code:
+```python
+import numpy as np
+
+# Example arrays
+condition = np.array([True, False, True])
+x = np.array([1, 2, 3])
+y = np.array([4, 5, 6])
+
+# Choose elements based on condition
+result = np.where(condition, x, y)
+print(result)
+```
+##### Output:
+```plaintext
+[1 5 3]
+```
+***
+#### 6. np.extract()
+Return the elements of an array that satisfy some condition.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Extract elements greater than 2
+condition = arr > 2
+result = np.extract(condition, arr)
+print(result)
+```
+##### Output:
+```plaintext
+[3 4 5]
+```
+***
+***
+
+### Array Iteration:
+
+#### 1. np.nditer()
+DESC
 
 ##### Code:
 ```python
@@ -1289,5 +1584,407 @@ Description
 
 ```
 ***
+#### 2. np.ndenumerate()
+DESC
 
+##### Code:
+```python
 
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.ndindex()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### Array Sorting and Searching:
+
+#### 1. np.sort()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.argsort()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.searchsorted()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### Array Set Operations:
+
+#### 1. np.unique()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.intersect1d()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.union1d()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 4. np.setdiff1d()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### File Input and Output:
+
+#### 1. np.loadtxt()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.genfromtxt()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.savetxt()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### Array Reshaping and Resizing:
+
+#### 1. np.resize()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.expand_dims()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.squeeze()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 4. np.swapaxes()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### Polynomial Functions:
+
+#### 1. np.poly()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.polyval()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.polyfit()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 4. np.roots()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### Statistical Functions:
+
+#### 1. np.histogram()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.bincount()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.percentile()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 4. np.corrcoef()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### Fourier Transformations:
+
+#### 1. np.fft.fft()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.fft.ifft()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.fft.fftfreq()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+
+### Other Utilities:
+
+#### 1. np.zeros_like()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 2. np.ones_like()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.empty_like()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 4. np.copy()
+DESC
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
