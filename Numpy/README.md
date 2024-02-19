@@ -1265,25 +1265,16 @@ print(x)
 [0. 1.]
 ```
 ##### Explination:
+## Solving a System of Linear Equations
 
 Given the system of linear equations:
 
-2x+y\=1x+y\=1\\begin{align\*} 2x + y &= 1 \\\\ x + y &= 1 \\end{align\*}2x+yx+y​\=1\=1​
-
-We represent this system in matrix form as:
-
-\[2111\]\[xy\]\=\[11\]\\begin{bmatrix} 2 & 1 \\\\ 1 & 1 \\\\ \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\\\ \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 1 \\\\ \\end{bmatrix}\[21​11​\]\[xy​\]\=\[11​\]
-
-This can be written concisely as Ax\=bAx = bAx\=b, where:
-
-*   AAA is the coefficient matrix,
-*   xxx is the column vector of variables,
-*   bbb is the column vector of constants.
-
-To solve for xxx, we can use the formula x\=A−1bx = A^{-1}bx\=A−1b, where A−1A^{-1}A−1 is the inverse of matrix AAA. However, directly computing the inverse can be computationally expensive.
-
-Instead, NumPy provides the `np.linalg.solve()` function, which efficiently solves systems of linear equations without explicitly computing the inverse. It takes the coefficient matrix AAA and the constants bbb as input and returns the solution vector xxx.
-
+```latex
+\begin{align*}
+2x + y &= 1 \\
+x + y &= 1
+\end{align*}
+```
 
 ***
 #### 7. np.linalg.lstsq()
