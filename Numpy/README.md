@@ -969,87 +969,165 @@ print(result)
 ### Array Manipulation:
 
 #### 1. np.reshape()
-Description
+Reshapes an array without changing its data.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+
+# Reshape the array to a 3x4 matrix
+reshaped_arr = np.reshape(arr, (3, 4))
+print(reshaped_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[ 1  2  3  4]
+ [ 5  6  7  8]
+ [ 9 10 11 12]]
 ```
 ***
 #### 2. np.ravel()
-Description
+Returns a flattened array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Flatten the array
+flattened_arr = np.ravel(arr)
+print(flattened_arr)
 ```
 ##### Output:
 ```plaintext
-
+[1 2 3 4 5 6]
 ```
 ***
 #### 3. np.transpose()
-Description
+Permute the dimensions of an array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Transpose the array
+transposed_arr = np.transpose(arr)
+print(transposed_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[1 4]
+ [2 5]
+ [3 6]]
 ```
 ***
 #### 4. np.concatenate()
-Description
+Joins a sequence of arrays along an existing axis.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6]])
+
+# Concatenate the arrays along the rows (axis=0)
+concatenated_arr = np.concatenate((arr1, arr2), axis=0)
+print("Concatenated along rows:")
+print(concatenated_arr)
+
+# Example arrays for concatenating along columns
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5], [6]])
+
+# Concatenate the arrays along the columns (axis=1)
+concatenated_arr = np.concatenate((arr1, arr2), axis=1)
+print("\nConcatenated along columns:")
+print(concatenated_arr)
 ```
 ##### Output:
 ```plaintext
+Concatenated along rows:
+[[1 2]
+ [3 4]
+ [5 6]]
 
+Concatenated along columns:
+[[1 2 5]
+ [3 4 6]]
 ```
 ***
 #### 5. np.split()
-Description
+Splits an array into multiple sub-arrays.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.arange(12)
+
+# Split the array into three sub-arrays
+split_arr = np.split(arr, 4)
+print(split_arr)
 ```
 ##### Output:
 ```plaintext
-
+[array([0, 1, 2]), array([3, 4, 5]), array([6, 7, 8]), array([ 9, 10, 11])]
 ```
 ***
 #### 6. np.hstack()
-Description
+Stacks arrays in sequence horizontally (column-wise).
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Stack the arrays horizontally
+stacked_arr = np.hstack((arr1, arr2))
+print(stacked_arr)
 ```
 ##### Output:
 ```plaintext
-
+[1 2 3 4 5 6]
 ```
 ***
 #### 7. np.vstack()
-Description
+Stacks arrays in sequence vertically (row-wise).
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([[1], [2], [3]])
+arr2 = np.array([[4], [5], [6]])
+
+# Stack the arrays vertically
+stacked_arr = np.vstack((arr1, arr2))
+print(stacked_arr)
 ```
 ##### Output:
 ```plaintext
-
+[[1]
+ [2]
+ [3]
+ [4]
+ [5]
+ [6]]
 ```
 ***
 ***
@@ -1076,64 +1154,137 @@ print(result)
 ```
 ***
 #### 2. np.matmul()
-Description
+Matrix product of two arrays.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([[1, 2],
+                 [3, 4]])
+
+arr2 = np.array([[5, 6],
+                 [7, 8]])
+
+# Matrix multiplication
+result = np.matmul(arr1, arr2)
+print(result)
 ```
 ##### Output:
 ```plaintext
-
+[[19 22]
+ [43 50]]
 ```
 ***
 #### 3. np.linalg.inv()
-Description
+Computes the inverse of a matrix.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the inverse of the matrix
+inverse_matrix = np.linalg.inv(arr)
+print(inverse_matrix)
 ```
 ##### Output:
 ```plaintext
-
+[[-2.   1. ]
+ [ 1.5 -0.5]]
 ```
 ***
 #### 4. np.linalg.det()
-Description
+Computes the determinant of a square matrix.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the determinant of the matrix
+determinant = np.linalg.det(arr)
+print(determinant)
 ```
 ##### Output:
 ```plaintext
-
+-2
 ```
 ***
-#### 5. 5. np.linalg.eig()
-Description
+#### 5. np.linalg.eig()
+Computes the eigenvalues and right eigenvectors of a square array.
+
+Eigenvalues: Eigenvalues are scalar values that represent how a linear transformation, represented by a matrix, stretches or contracts vectors. For a square matrix A, an eigenvalue λ and its corresponding eigenvector v satisfy the equation Av = λv. Each eigenvalue describes a scaling factor for its corresponding eigenvector.
+
+Eigenvectors: Eigenvectors are non-zero vectors that, when transformed by a matrix, only change in scale (magnitude) and not in direction. They represent the directions along which the linear transformation represented by the matrix has a simple effect.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Compute the eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(arr)
+print("Eigenvalues:", eigenvalues, sep="\n ", end="\n\n")
+print("Eigenvectors:", eigenvectors, sep="\n")
 ```
 ##### Output:
 ```plaintext
+Eigenvalues:
+ [-0.37228132  5.37228132]
 
+Eigenvectors:
+[[-0.82456484 -0.41597356]
+ [ 0.56576746 -0.90937671]]
 ```
 ***
 #### 6. np.linalg.solve()
-Description
+Solves a linear matrix equation.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+A = np.array([[2, 1], [1, 1]])
+b = np.array([1, 1])
+
+# Solve the linear equation Ax = b
+x = np.linalg.solve(A, b)
+print(x)
 ```
 ##### Output:
 ```plaintext
-
+[0. 1.]
 ```
+##### Explination:
+
+Given the system of linear equations:
+
+2x+y\=1x+y\=1\\begin{align\*} 2x + y &= 1 \\\\ x + y &= 1 \\end{align\*}2x+yx+y​\=1\=1​
+
+We represent this system in matrix form as:
+
+\[2111\]\[xy\]\=\[11\]\\begin{bmatrix} 2 & 1 \\\\ 1 & 1 \\\\ \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\\\ \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 1 \\\\ \\end{bmatrix}\[21​11​\]\[xy​\]\=\[11​\]
+
+This can be written concisely as Ax\=bAx = bAx\=b, where:
+
+*   AAA is the coefficient matrix,
+*   xxx is the column vector of variables,
+*   bbb is the column vector of constants.
+
+To solve for xxx, we can use the formula x\=A−1bx = A^{-1}bx\=A−1b, where A−1A^{-1}A−1 is the inverse of matrix AAA. However, directly computing the inverse can be computationally expensive.
+
+Instead, NumPy provides the `np.linalg.solve()` function, which efficiently solves systems of linear equations without explicitly computing the inverse. It takes the coefficient matrix AAA and the constants bbb as input and returns the solution vector xxx.
+
+
 ***
 #### 7. np.linalg.lstsq()
 Description
