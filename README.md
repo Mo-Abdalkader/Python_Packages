@@ -28,7 +28,7 @@ The "Python Packages" repository serves as a comprehensive resource hub for esse
 Contributions to this repository are encouraged and valued. Feel free to submit pull requests, suggest improvements, or report issues to help enhance the repository's usefulness for the Python community.
 
 ## License:
-This repository is open-source under [insert license type], ensuring accessibility and flexibility for all users.
+This repository is open-source under [MIT], ensuring accessibility and flexibility for all users.
 
 ## Get Started:
 Explore the folders within this repository to delve into the world of essential Python packages, and accelerate your journey towards mastering data science and scientific computing with Python.
