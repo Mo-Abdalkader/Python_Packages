@@ -77,9 +77,8 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 17. np.subtract()
 18. np.multiply()
 19. np.divide()
-20. np.dot()
 
-### Array Manipulation:
+### [Array Manipulation](#Array-Manipulation-1)
 1. np.reshape()
 2. np.ravel()
 3. np.transpose()
@@ -88,7 +87,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.hstack()
 7. np.vstack()
 
-### Linear Algebra:
+### [Linear Algebra](#Linear-Algebra-1)
 1. np.dot()
 2. np.matmul()
 3. np.linalg.inv()
@@ -866,11 +865,19 @@ Adds arguments element-wise.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Element-wise addition
+result = np.add(arr1, arr2)
+print(result)
 ```
 ##### Output:
 ```plaintext
-
+[5 7 9]
 ```
 ***
 #### 17. np.subtract()
@@ -878,11 +885,19 @@ Subtracts arguments element-wise.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([4, 5, 6])
+arr2 = np.array([1, 2, 3])
+
+# Element-wise subtraction
+result = np.subtract(arr1, arr2)
+print(result)
 ```
 ##### Output:
 ```plaintext
-
+[3 3 3]
 ```
 ***
 #### 18. np.multiply()
@@ -890,11 +905,19 @@ Multiplies arguments element-wise.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Element-wise multiplication
+result = np.multiply(arr1, arr2)
+print(result)
 ```
 ##### Output:
 ```plaintext
-
+[ 4 10 18]
 ```
 ***
 #### 19. np.divide()
@@ -902,23 +925,19 @@ Returns a true division of the inputs, element-wise.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([4, 6, 8])
+arr2 = np.array([2, 3, 4])
+
+# Element-wise division
+result = np.divide(arr1, arr2)
+print(result)
 ```
 ##### Output:
 ```plaintext
-
-```
-***
-#### 20. np.dot()
-Dot product of two arrays.
-
-##### Code:
-```python
-
-```
-##### Output:
-```plaintext
-
+[2. 2. 2.]
 ```
 ***
 
@@ -947,8 +966,10 @@ Dot product of two arrays.
 
 ***
 ***
+### Array Manipulation:
 
-#### 
+#### 1. np.reshape()
+Description
 
 ##### Code:
 ```python
@@ -958,8 +979,173 @@ Dot product of two arrays.
 ```plaintext
 
 ```
+***
+#### 2. np.ravel()
+Description
 
+##### Code:
+```python
 
+```
+##### Output:
+```plaintext
 
+```
+***
+#### 3. np.transpose()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 4. np.concatenate()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 5. np.split()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 6. np.hstack()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 7. np.vstack()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+***
+### Linear Algebra:
+   
+#### 1. np.dot()
+Dot product of two arrays.
+
+##### Code:
+```python
+import numpy as np
+
+# Example arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Dot product
+result = np.dot(arr1, arr2)
+print(result)
+```
+##### Output:
+```plaintext
+32
+```
+***
+#### 2. np.matmul()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 3. np.linalg.inv()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 4. np.linalg.det()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 5. 5. np.linalg.eig()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 6. np.linalg.solve()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
+#### 7. np.linalg.lstsq()
+Description
+
+##### Code:
+```python
+
+```
+##### Output:
+```plaintext
+
+```
+***
 
 
