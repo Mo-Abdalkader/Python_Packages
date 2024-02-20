@@ -2526,7 +2526,7 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 ##### Output:
-[Histogram](https://github.com/Mo-Abdalkader/Python_Packages/blob/main/Numpy/Histogram.png)
+![Histogram](https://github.com/Mo-Abdalkader/Python_Packages/blob/main/Numpy/Histogram.png)
 
 ***
 #### 2. np.bincount()
