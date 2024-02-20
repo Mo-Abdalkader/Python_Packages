@@ -421,7 +421,7 @@ Use **subok=False** when you want to ensure that the output array is of the base
 ***
 ***
 
-### Random Number Generation [↑](#Random-Number-Generation):
+### Random Number Generation [↑](#Random-Number-Generation) :
 
 
 #### 1- np.random.rand()
