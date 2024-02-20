@@ -42,11 +42,15 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 ### [Array Creation](#array-creation-1)
 1. np.array()
 2. np.zeros()
-3. np.ones()
-4. np.empty()
-5. np.arange()
-6. np.linspace()
-7. np.eye()
+3. np.zeros_like()
+4. np.ones()
+5. np.ones_like()
+6. np.empty()
+7. np.empty_like()
+8. np.arange()
+9. np.linspace()
+10. np.eye()
+11. np.copy()
 
 ### [Random Number Generation](#random-number-generation-1)
 1. np.random.rand()
@@ -115,8 +119,8 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 
 ### [Array Iteration](#Array-Iteration-1)
 1. np.nditer()
-2. np.ndenumerate()
-3. np.ndindex()
+2. np.ndindex()
+3. np.ndenumerate()
 
 ### [Array Sorting and Searching](#Array-Sorting-and-Searching-1):
 1. np.sort()
@@ -158,12 +162,10 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 3. np.fft.fftfreq()
 
 ### [Other Utilities](#Other-Utilities-1):
-1. np.zeros_like()
-2. np.ones_like()
-3. np.empty_like()
-4. np.copy()
-
-
+1. +
+2. -
+3. *
+4. /
 
 ***
 ***
@@ -203,7 +205,27 @@ print(zeros_array)
  [0. 0. 0. 0.]]
 ```
 ---
-#### 3- np.ones()
+#### 3- np.zeros_like()
+Creates an array of zeros with the same shape and type as a given array.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Create an array of zeros with the same shape as arr
+zeros_like_arr = np.zeros_like(arr)
+print(zeros_like_arr)
+```
+##### Output:
+```plaintext
+[[0 0 0]
+ [0 0 0]]
+```
+---
+#### 4- np.ones()
 Creating an array of ones with a specified shape
 
 ##### Code:
@@ -221,7 +243,29 @@ print(ones_array)
  [1. 1.]]
 ```
 ---
-#### 4- np.empty()
+
+
+#### 5- np.ones_like()
+Creates an array of ones with the same shape and type as a given array.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Create an array of ones with the same shape as arr
+ones_like_arr = np.ones_like(arr)
+print(ones_like_arr)
+```
+##### Output:
+```plaintext
+[[1 1 1]
+ [1 1 1]]
+```
+---
+#### 6- np.empty()
 Creating an uninitialized array with a specified shape
 
 ##### Code:
@@ -238,7 +282,27 @@ print(empty_array)
  [1.04591558e-311 1.04591558e-311]]
 ```
 ---
-#### 5- np.arange()
+#### 7- np.empty_like()
+Creates an empty array with the same shape and type as a given array.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Create an empty (Random Values) array with the same shape as arr
+empty_like_arr = np.empty_like(arr)
+print(empty_like_arr)
+```
+##### Output:
+```plaintext
+[[-998669648      32761 -998665136]
+ [     32761          0          0]]
+```
+---
+#### 8- np.arange()
 Creating an array of evenly spaced values within a given range
 
 ##### Code:
@@ -253,7 +317,7 @@ print(range_array)
 [0 2 4 6 8]
 ```
 ---
-#### 6- np.linspace()
+#### 9- np.linspace()
 Creating an array of evenly spaced numbers over a specified interval
 
 ##### Code:
@@ -280,7 +344,7 @@ print(linspace_array)
 [1.  1.5  2.  2.5  3.  3.5  4.  4.5  5. ]
 ```
 ---
-#### 7- np.eye()
+#### 10- np.eye()
 Creating a 2-D identity matrix (diagonal array of ones)
 
 ##### Code:
@@ -299,16 +363,62 @@ print(identity_matrix)
  [0. 0. 0. 0. 1.]]
 ```
 ***
+#### 11. np.copy()
+Creates a deep copy of an array.
+
+##### Code:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Create a copy of arr
+arr_copy = np.copy(arr)
+print(arr_copy)
+```
+##### Output:
+```plaintext
+[[1 2 3]
+ [4 5 6]]
+```
+***
+
 
 | Function       | Description                                                | Syntax                                      |
 |----------------|------------------------------------------------------------|---------------------------------------------|
 | `np.array()`   | Create an array from a Python list or array-like object.   | `np.array(object, dtype=None, copy=True)`  |
 | `np.zeros()`   | Create an array filled with zeros.                         | `np.zeros(shape, dtype=float, order='C')`  |
+| `np.zeros_like()`   | Creates an array of zeros with the same shape and type as a given array. | `np.zeros_like(a, dtype=None, order='K', subok=True, shape=None)`  |
 | `np.ones()`    | Create an array filled with ones.                          | `np.ones(shape, dtype=None, order='C')`    |
+| `np.ones_like()`    | Creates an array of ones with the same shape and type as a given array. | `np.ones_like(a, dtype=None, order='K', subok=True, shape=None)`    |
 | `np.empty()`   | Create an uninitialized array.                             | `np.empty(shape, dtype=float, order='C')`  |
+| `np.empty_like()`   | Creates an empty array with the same shape and type as a given array. | `np.empty_like(a, dtype=None, order='K', subok=True, shape=None)`  |
 | `np.arange()`  | Create an array with evenly spaced values within a range.  | `np.arange(start, stop, step, dtype=None)` |
 | `np.linspace()`| Create an array with evenly spaced numbers over a specified interval.| `np.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)`|
 | `np.eye()`     | Create a 2-D identity matrix (diagonal array of ones).     | `np.eye(N, M=None, k=0, dtype=float)`      |
+| `np.copy()`    | Creates a deep copy of an array.                           | `np.copy(a)`                               |
+
+##### NOTE | 
+`a`: This parameter represents the array-like input. It can be a NumPy array or any array-like object (e.g., list, tuple, etc.).
+`dtype=None`: This parameter specifies the data type of the output array. If not provided, it defaults to the data type of the input a.
+
+`order='K'`: This parameter is used to specify the memory layout of the array. It determines how elements of the array are stored in memory.
+It can take two values:
+'C' (default): This stands for C-style contiguous memory layout, also known as row-major order. In this layout, elements of each row are stored contiguously in memory.
+'F': This stands for Fortran-style contiguous memory layout, also known as column-major order. In this layout, elements of each column are stored contiguously in memory.
+'K': NumPy will keep the memory layout of the input array unchanged.
+
+`subok=True`: This parameter specifies whether to allow subclasses of the input array.
+It can take two values:
+True (default): This allows subclasses of the input array a to be passed through. If the input array is a subclass, the output array will also be a subclass.
+False         : This ensures that the output array will be of the base class (i.e., not a subclass), regardless of the input array's subclass status.
+**Subclasses** in NumPy can provide additional functionality or behavior compared to the base array class. By default, NumPy functions preserve subclassing, but you can disable this behavior by setting subok to False.
+Use **subok=True** when you want to retain subclassing in the output array. 
+Use **subok=False** when you want to ensure that the output array is of the base class, regardless of the input array's subclass status.
+
+`shape=None`: This parameter specifies the shape of the output array. If not provided, it defaults to the shape of the input array a.
+
 
 ***
 ***
@@ -1573,171 +1683,389 @@ print(result)
 ### Array Iteration:
 
 #### 1. np.nditer()
-DESC
+Iterates over an array applying operation for each element.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Iterate over the array using nditer
+for x in np.nditer(arr):
+    print(x)
 ```
 ##### Output:
 ```plaintext
-
+1
+2
+3
+4
 ```
 ***
-#### 2. np.ndenumerate()
-DESC
+#### 2. np.ndindex()
+Iterates over multi-dimensional index arrays.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example array shape
+shape = (2, 2)
+
+# Iterate over indices using ndindex
+for index in np.ndindex(shape):
+    print(index)
 ```
-##### Output:
+##### Output1:
 ```plaintext
+(0, 0)
+(0, 1)
+(1, 0)
+(1, 1)
+```
 
+##### Code2:
+```python
+import numpy as np
+
+# Example array shape
+shape = (2, 2, 2)
+
+# Iterate over indices using ndindex
+for index in np.ndindex(shape):
+    print(index)
+```
+##### Output2:
+```plaintext
+(0, 0, 0)
+(0, 0, 1)
+(0, 1, 0)
+(0, 1, 1)
+(1, 0, 0)
+(1, 0, 1)
+(1, 1, 0)
+(1, 1, 1)
 ```
 ***
-#### 3. np.ndindex()
-DESC
+#### 3. np.ndenumerate()
+Iterates over an array and yields index and value of each element.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2],
+                [3, 4]])
+
+# Enumerate over the array using ndenumerate
+for index, value in np.ndenumerate(arr):
+    print("Index:", index, "Value:", value)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-
+Index: (0, 0) Value: 1
+Index: (0, 1) Value: 2
+Index: (1, 0) Value: 3
+Index: (1, 1) Value: 4
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[[1, 2], [3, 4]],
+                [[5, 6], [7, 8]]])
+
+# Enumerate over the array using ndenumerate
+for index, value in np.ndenumerate(arr):
+    print("Index:", index, "Value:", value)
+```
+##### Output2:
+```plaintext
+Index: (0, 0, 0) Value: 1
+Index: (0, 0, 1) Value: 2
+Index: (0, 1, 0) Value: 3
+Index: (0, 1, 1) Value: 4
+Index: (1, 0, 0) Value: 5
+Index: (1, 0, 1) Value: 6
+Index: (1, 1, 0) Value: 7
+Index: (1, 1, 1) Value: 8
+```
+
 ***
 ***
 
 ### Array Sorting and Searching:
 
 #### 1. np.sort()
-DESC
+Returns a sorted copy of an array.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([3, 1, 4, 2])
+
+# Sort the array
+sorted_arr = np.sort(arr)
+print(sorted_arr)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-
+[1 2 3 4]
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[3, 1], 
+                [4, 2]])
+
+# Sort the array
+sorted_arr = np.sort(arr)
+print(sorted_arr)
+```
+##### Output2:
+```plaintext
+[[1 3]
+ [2 4]]
+```
+
 ***
 #### 2. np.argsort()
-DESC
+Returns the indices that would sort an array.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([3, 1, 4, 2])
+
+# Get the indices that would sort the array
+indices = np.argsort(arr)
+print(indices)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-
+[1 3 0 2]
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[3, 1],
+                [4, 2]])
+
+# Get the indices that would sort the array
+indices = np.argsort(arr)
+print(indices)
+```
+##### Output2:
+```plaintext
+[[1 0]
+ [1 0]]
+```
+
 ***
 #### 3. np.searchsorted()
-DESC
+Finds the indices into a sorted array where elements should be inserted to maintain order.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example sorted array
+arr = np.array([1, 3, 5, 7, 9])
+
+# Find indices where 4 should be inserted to maintain order
+indices = np.searchsorted(arr, 4)
+print(indices)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-
+2
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example sorted array
+arr = np.array([1, 3, 5, 7, 9])
+
+# Find indices where 10 should be inserted to maintain order
+indices = np.searchsorted(arr, 10)
+print(indices)
+```
+##### Output2:
+```plaintext
+5
+```
+
 ***
 ***
 
 ### Array Set Operations:
 
 #### 1. np.unique()
-DESC
+Finds the unique elements of an array.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([1, 2, 1, 3, 4, 2, 5])
+
+# Find unique elements
+unique_elements = np.unique(arr)
+print(unique_elements)
 ```
 ##### Output:
 ```plaintext
-
+[1 2 3 4 5]
 ```
 ***
 #### 2. np.intersect1d()
-DESC
+Finds the intersection of two arrays.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+
+# Find intersection
+intersection = np.intersect1d(arr1, arr2)
+print(intersection)
 ```
 ##### Output:
 ```plaintext
-
+[3 4]
 ```
 ***
 #### 3. np.union1d()
-DESC
+Finds the union of two arrays.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+
+# Find union
+union = np.union1d(arr1, arr2)
+print(union)
 ```
 ##### Output:
 ```plaintext
-
+[1 2 3 4 5 6]
 ```
 ***
 #### 4. np.setdiff1d()
-DESC
+Finds the set difference of two arrays.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example arrays
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+
+# Find set difference
+difference = np.setdiff1d(arr1, arr2)
+print(difference)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-
+[1 2]
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example arrays
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+
+# Find set difference
+difference = np.setdiff1d(arr2, arr1)
+print(difference)
+```
+##### Output2:
+```plaintext
+[5 6]
+```
+
 ***
 ***
 
 ### File Input and Output:
 
 #### 1. np.loadtxt()
-DESC
+Loads data from a text file.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Load data from a text file
+data = np.loadtxt('data.txt')
+print(data)
 ```
 ##### Output:
 ```plaintext
-
+Output depends on the content of the 'data.txt' file.
 ```
 ***
 #### 2. np.genfromtxt()
-DESC
+Loads data from a text file with more options than np.loadtxt().
 
 ##### Code:
 ```python
+import numpy as np
 
+# Load data from a text file with specific options
+data = np.genfromtxt('data.txt', delimiter=',', skip_header=1)
+print(data)
 ```
 ##### Output:
 ```plaintext
-
+Output depends on the content of the 'data.txt' file.
 ```
 ***
 #### 3. np.savetxt()
-DESC
+Saves an array to a text file.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Save array to a text file
+np.savetxt('output.txt', arr, delimiter=',')
 ```
 ##### Output:
 ```plaintext
-
+No explicit output, The array is saved to 'output.txt' file.
 ```
 ***
 ***
@@ -1940,7 +2268,7 @@ DESC
 
 ### Other Utilities:
 
-#### 1. np.zeros_like()
+#### 1. +
 DESC
 
 ##### Code:
@@ -1952,7 +2280,7 @@ DESC
 
 ```
 ***
-#### 2. np.ones_like()
+#### 2. -
 DESC
 
 ##### Code:
@@ -1964,7 +2292,7 @@ DESC
 
 ```
 ***
-#### 3. np.empty_like()
+#### 3. *
 DESC
 
 ##### Code:
@@ -1976,7 +2304,7 @@ DESC
 
 ```
 ***
-#### 4. np.copy()
+#### 4. /
 DESC
 
 ##### Code:
