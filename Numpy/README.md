@@ -401,6 +401,7 @@ print(arr_copy)
 
 ##### NOTE | 
 `a`: This parameter represents the array-like input. It can be a NumPy array or any array-like object (e.g., list, tuple, etc.).
+
 `dtype=None`: This parameter specifies the data type of the output array. If not provided, it defaults to the data type of the input a.
 
 `order='K'`: This parameter is used to specify the memory layout of the array. It determines how elements of the array are stored in memory.
@@ -887,7 +888,9 @@ print(exp_arr)
 ***
 #### 13. np.log() | np.log2() | np.log10()
 `np.log()` Computes the natural logarithm of the input array.
+
 `np.log()` Computes the base-2 logarithm of all elements in the array.
+
 `np.log()` Computes the base-10 logarithm of all elements in the array.
 
 ##### Code:
