@@ -39,7 +39,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 
 ## NumPy Functions Table:
 
-### [Array Creation](#array-creation--)
+### [Array Creation](#array-creation-)
 1. np.array()
 2. np.zeros()
 3. np.zeros_like()
@@ -52,7 +52,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 10. np.eye()
 11. np.copy()
 
-### [Random Number Generation](#random-number-generation--)
+### [Random Number Generation](#random-number-generation-)
 1. np.random.rand()
 2. np.random.randn()
 3. np.random.random()
@@ -61,7 +61,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.random.choice()
 7. np.random.shuffle()
 
-### [Mathematical Functions](#Mathematical-Functions--)
+### [Mathematical Functions](#Mathematical-Functions-)
 1. np.sum()
 2. np.mean()
 3. np.var()
@@ -82,7 +82,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 18. np.multiply()
 19. np.divide()
 
-### [Array Manipulation](#Array-Manipulation--)
+### [Array Manipulation](#Array-Manipulation-)
 1. np.reshape()
 2. np.ravel()
 3. np.transpose()
@@ -91,7 +91,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.hstack()
 7. np.vstack()
 
-### [Linear Algebra](#Linear-Algebra--)
+### [Linear Algebra](#Linear-Algebra-)
 1. np.dot()
 2. np.matmul()
 3. np.linalg.inv()
@@ -100,7 +100,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linalg.solve()
 7. np.linalg.lstsq()
 
-### [Array Comparison and Boolean Operations](#Array-Comparison-and-Boolean-Operations--)
+### [Array Comparison and Boolean Operations](#Array-Comparison-and-Boolean-Operations-)
 1. np.equal()
 2. np.not_equal()
 3. np.logical_and()
@@ -109,7 +109,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.all()
 7. np.any()
 
-### [Array Indexing and Slicing](#Array-Indexing-and-Slicing--)
+### [Array Indexing and Slicing](#Array-Indexing-and-Slicing-)
 1. np.take()
 2. np.put()
 3. np.argmax()
@@ -117,57 +117,57 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 5. np.where()
 6. np.extract()
 
-### [Array Iteration](#Array-Iteration--)
+### [Array Iteration](#Array-Iteration-)
 1. np.nditer()
 2. np.ndindex()
 3. np.ndenumerate()
 
-### [Array Sorting and Searching](#Array-Sorting-and-Searching--):
+### [Array Sorting and Searching](#Array-Sorting-and-Searching-):
 1. np.sort()
 2. np.argsort()
 3. np.searchsorted()
 
-### [Array Set Operations](#Array-Set-Operations--):
+### [Array Set Operations](#Array-Set-Operations-):
 1. np.unique()
 2. np.intersect1d()
 3. np.union1d()
 4. np.setdiff1d()
 
-### [File Input and Output](#File-Input-and-Output--):
+### [File Input and Output](#File-Input-and-Output-):
 1. np.loadtxt()
 2. np.genfromtxt()
 3. np.savetxt()
 
-### [Array Reshaping and Resizing](#Array-Reshaping-and-Resizing--):
+### [Array Reshaping and Resizing](#Array-Reshaping-and-Resizing-):
 1. np.resize()
 2. np.expand_dims()
 3. np.squeeze()
 4. np.swapaxes()
 
-### [Polynomial Functions](#Polynomial-Functions--):
+### [Polynomial Functions](#Polynomial-Functions-):
 1. np.poly()
 2. np.polyval()
 3. np.polyfit()
 4. np.roots()
 
-### [Statistical Functions](#Statistical-Functions--):
+### [Statistical Functions](#Statistical-Functions-):
 1. np.histogram()
 2. np.bincount()
 3. np.percentile()
 4. np.corrcoef()
 
-### [Fourier Transformations](#Fourier-Transformations--):
+### [Fourier Transformations](#Fourier-Transformations-):
 1. np.fft.fft()
 2. np.fft.ifft()
 3. np.fft.fftfreq()
 
-### [Other Utilities](#Other-Utilities--):
+### [Other Utilities](#Other-Utilities-):
 1. 
 
 ***
 ***
 
-### Array Creation [↑](#Array-Creation) :
+### Array Creation [↑](#Array-Creation):
 
 #### 1- np.array()
 Creating a NumPy array from a Python list or tuple.
@@ -421,7 +421,7 @@ Use **subok=False** when you want to ensure that the output array is of the base
 ***
 ***
 
-### Random Number Generation [↑](#Random-Number-Generation) :
+### Random Number Generation [↑](#Random-Number-Generation):
 
 
 #### 1- np.random.rand()
