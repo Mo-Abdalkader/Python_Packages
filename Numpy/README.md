@@ -39,7 +39,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 
 ## NumPy Functions Table:
 
-### [Array Creation](#array-creation-1)
+### [Array Creation](#array-creation--)
 1. np.array()
 2. np.zeros()
 3. np.zeros_like()
@@ -52,7 +52,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 10. np.eye()
 11. np.copy()
 
-### [Random Number Generation](#random-number-generation-1)
+### [Random Number Generation](#random-number-generation--)
 1. np.random.rand()
 2. np.random.randn()
 3. np.random.random()
@@ -61,7 +61,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.random.choice()
 7. np.random.shuffle()
 
-### [Mathematical Functions](#Mathematical-Functions-1)
+### [Mathematical Functions](#Mathematical-Functions--)
 1. np.sum()
 2. np.mean()
 3. np.var()
@@ -82,7 +82,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 18. np.multiply()
 19. np.divide()
 
-### [Array Manipulation](#Array-Manipulation-1)
+### [Array Manipulation](#Array-Manipulation--)
 1. np.reshape()
 2. np.ravel()
 3. np.transpose()
@@ -91,7 +91,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.hstack()
 7. np.vstack()
 
-### [Linear Algebra](#Linear-Algebra-1)
+### [Linear Algebra](#Linear-Algebra--)
 1. np.dot()
 2. np.matmul()
 3. np.linalg.inv()
@@ -100,7 +100,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.linalg.solve()
 7. np.linalg.lstsq()
 
-### [Array Comparison and Boolean Operations](#Array-Comparison-and-Boolean-Operations-1)
+### [Array Comparison and Boolean Operations](#Array-Comparison-and-Boolean-Operations--)
 1. np.equal()
 2. np.not_equal()
 3. np.logical_and()
@@ -109,7 +109,7 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 6. np.all()
 7. np.any()
 
-### [Array Indexing and Slicing](#Array-Indexing-and-Slicing-1)
+### [Array Indexing and Slicing](#Array-Indexing-and-Slicing--)
 1. np.take()
 2. np.put()
 3. np.argmax()
@@ -117,55 +117,52 @@ NumPy's versatility and performance make it a cornerstone of AI development, ena
 5. np.where()
 6. np.extract()
 
-### [Array Iteration](#Array-Iteration-1)
+### [Array Iteration](#Array-Iteration--)
 1. np.nditer()
 2. np.ndindex()
 3. np.ndenumerate()
 
-### [Array Sorting and Searching](#Array-Sorting-and-Searching-1):
+### [Array Sorting and Searching](#Array-Sorting-and-Searching--):
 1. np.sort()
 2. np.argsort()
 3. np.searchsorted()
 
-### [Array Set Operations](#Array-Set-Operations-1):
+### [Array Set Operations](#Array-Set-Operations--):
 1. np.unique()
 2. np.intersect1d()
 3. np.union1d()
 4. np.setdiff1d()
 
-### [File Input and Output](#File-Input-and-Output-1):
+### [File Input and Output](#File-Input-and-Output--):
 1. np.loadtxt()
 2. np.genfromtxt()
 3. np.savetxt()
 
-### [Array Reshaping and Resizing](#Array-Reshaping-and-Resizing-1):
+### [Array Reshaping and Resizing](#Array-Reshaping-and-Resizing--):
 1. np.resize()
 2. np.expand_dims()
 3. np.squeeze()
 4. np.swapaxes()
 
-### [Polynomial Functions](#Polynomial-Functions-1):
+### [Polynomial Functions](#Polynomial-Functions--):
 1. np.poly()
 2. np.polyval()
 3. np.polyfit()
 4. np.roots()
 
-### [Statistical Functions](#Statistical-Functions-1):
+### [Statistical Functions](#Statistical-Functions--):
 1. np.histogram()
 2. np.bincount()
 3. np.percentile()
 4. np.corrcoef()
 
-### [Fourier Transformations](#Fourier-Transformations-1):
+### [Fourier Transformations](#Fourier-Transformations--):
 1. np.fft.fft()
 2. np.fft.ifft()
 3. np.fft.fftfreq()
 
-### [Other Utilities](#Other-Utilities-1):
-1. +
-2. -
-3. *
-4. /
+### [Other Utilities](#Other-Utilities--):
+1. 
 
 ***
 ***
@@ -424,7 +421,7 @@ Use **subok=False** when you want to ensure that the output array is of the base
 ***
 ***
 
-### Random Number Generation:
+### Random Number Generation [↑](#Random-Number-Generation):
 
 
 #### 1- np.random.rand()
@@ -572,7 +569,7 @@ Shuffled Array : [0 8 7 9 3 6 4 5 1 2]
 
 ***
 ***
-### Mathematical Functions:
+### Mathematical Functions [↑](#Mathematical-Functions):
 
 #### 1. np.sum()
 Computes the sum of array elements over a given axis.
@@ -976,7 +973,7 @@ print(square_arr)
 #### 16. np.add()
 Adds arguments element-wise.
 
-##### Code:
+##### Code1:
 ```python
 import numpy as np
 
@@ -986,11 +983,35 @@ arr2 = np.array([4, 5, 6])
 
 # Element-wise addition
 result = np.add(arr1, arr2)
-print(result)
+print("Using np.add() : ", result)
+
+result = arr1 + arr2
+print("Using +        : ", result)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-[5 7 9]
+Using np.add() :  [5 7 9]
+Using +        :  [5 7 9]
+```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example arrays
+arr1 = np.array([1, 2, 3])
+
+# Element-wise addition
+result = np.add(arr1, 10)
+print("Using np.add() : ", result)
+
+result = arr1 + 10
+print("Using +        : ", result)
+```
+##### Output2:
+```plaintext
+Using np.add() :  [11 12 13]
+Using +        :  [11 12 13]
 ```
 ***
 #### 17. np.subtract()
@@ -1001,22 +1022,47 @@ Subtracts arguments element-wise.
 import numpy as np
 
 # Example arrays
-arr1 = np.array([4, 5, 6])
-arr2 = np.array([1, 2, 3])
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
 
 # Element-wise subtraction
-result = np.subtract(arr1, arr2)
-print(result)
+result = np.subtract(arr2, arr1)
+print("Using np.subtract() : ", result)
+
+result = arr2 - arr1
+print("Using -              : ", result)
 ```
 ##### Output:
 ```plaintext
-[3 3 3]
+Using np.subtract()  :  [3 3 3]
+Using -              :  [3 3 3]
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([1, 2, 3])
+
+# Scalar subtraction
+result = np.subtract(arr, 1)
+print("Using np.subtract()  : ", result)
+
+result = arr - 1
+print("Using -              : ", result)
+```
+##### Output2:
+```plaintext
+Using np.subtract()  :  [0 1 2]
+Using -              :  [0 1 2]
+```
+
 ***
 #### 18. np.multiply()
 Multiplies arguments element-wise.
 
-##### Code:
+##### Code1:
 ```python
 import numpy as np
 
@@ -1026,32 +1072,82 @@ arr2 = np.array([4, 5, 6])
 
 # Element-wise multiplication
 result = np.multiply(arr1, arr2)
-print(result)
+print("Using np.multiply() : ", result)
+
+result = arr1 * arr2
+print("Using *             : ", result)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-[ 4 10 18]
+Using np.multiply() :  [ 4 10 18]
+Using *             :  [ 4 10 18]
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([1, 2, 3])
+
+# Scalar multiplication
+result = np.multiply(arr, 2)
+print("Using np.multiply() : ", result)
+
+result = arr * 2
+print("Using *             : ", result)
+```
+##### Output2:
+```plaintext
+Using np.multiply() :  [2 4 6]
+Using *             :  [2 4 6]
+```
+
 ***
 #### 19. np.divide()
 Returns a true division of the inputs, element-wise.
 
-##### Code:
+##### Code1:
 ```python
 import numpy as np
 
 # Example arrays
-arr1 = np.array([4, 6, 8])
-arr2 = np.array([2, 3, 4])
+arr1 = np.array([10, 20, 30])
+arr2 = np.array([2, 5, 3])
 
 # Element-wise division
 result = np.divide(arr1, arr2)
-print(result)
+print("Using np.divide() : ", result)
+
+result = arr1 / arr2
+print("Using /          : ", result)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-[2. 2. 2.]
+Using np.divide() :  [5. 4. 10.]
+Using /           :  [5. 4. 10.]
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([10, 20, 30])
+
+# Scalar division
+result = np.divide(arr, 2)
+print("Using np.divide() : ", result)
+
+result = arr / 2
+print("Using /          : ", result)
+```
+##### Output2:
+```plaintext
+Using np.divide() :  [ 5. 10. 15.]
+Using /           :  [ 5. 10. 15.]
+```
+
 ***
 
 | Function        | Description                                                       | Syntax                                      |
@@ -1079,7 +1175,7 @@ print(result)
 
 ***
 ***
-### Array Manipulation:
+### Array Manipulation [↑](#Array-Manipulation):
 
 #### 1. np.reshape()
 Reshapes an array without changing its data.
@@ -1244,7 +1340,7 @@ print(stacked_arr)
 ```
 ***
 ***
-### Linear Algebra:
+### Linear Algebra [↑](#Linear-Algebra):
    
 #### 1. np.dot()
 Dot product of two arrays.
@@ -1418,7 +1514,7 @@ print(solution)
 ```
 ***
 ***
-### Array Comparison and Boolean Operations:
+### Array Comparison and Boolean Operations [↑](#Array-Comparison-and-Boolean-Operations):
 
 #### 1. np.equal()
 Tests element-wise equality of two arrays.
@@ -1559,7 +1655,7 @@ True
 ***
 ***
 
-### Array Indexing and Slicing:
+### Array Indexing and Slicing [↑](#Array-Indexing-and-Slicing):
 
 #### 1. np.take()
 Returns elements from an array along an axis.
@@ -1683,7 +1779,7 @@ print(result)
 ***
 ***
 
-### Array Iteration:
+### Array Iteration [↑](#Array-Iteration):
 
 #### 1. np.nditer()
 Iterates over an array applying operation for each element.
@@ -1802,7 +1898,7 @@ Index: (1, 1, 1) Value: 8
 ***
 ***
 
-### Array Sorting and Searching:
+### Array Sorting and Searching [↑](#Array-Sorting-and-Searching):
 
 #### 1. np.sort()
 Returns a sorted copy of an array.
@@ -1918,7 +2014,7 @@ print(indices)
 ***
 ***
 
-### Array Set Operations:
+### Array Set Operations [↑](#Array-Set-Operations):
 
 #### 1. np.unique()
 Finds the unique elements of an array.
@@ -2019,7 +2115,7 @@ print(difference)
 ***
 ***
 
-### File Input and Output:
+### File Input and Output [↑](#File-Input-and-Output):
 
 #### 1. np.loadtxt()
 Loads data from a text file.
@@ -2073,249 +2169,488 @@ No explicit output, The array is saved to 'output.txt' file.
 ***
 ***
 
-### Array Reshaping and Resizing:
+### Array Reshaping and Resizing [↑](#Array-Reshaping-and-Resizing):
 
 #### 1. np.resize()
-DESC
+Returns a new array with the specified shape.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Resize the array to a new shape
+resized_arr = np.resize(arr, (4, 3))
+print(resized_arr)
 ```
-##### Output:
+##### Output1:
 ```plaintext
-
+[[1 2 3]
+ [4 1 2]
+ [3 4 1]
+ [2 3 4]]
 ```
+
+##### Code2:
+```python
+import numpy as np
+
+# Example array
+arr = np.array([[1, 2], [3, 4]])
+
+# Resize the array to a new shape
+resized_arr = np.resize(arr, (2, 3, 1))
+print(resized_arr)
+```
+##### Output2:
+```plaintext
+[[[1]
+  [2]
+  [3]]
+
+ [[4]
+  [1]
+  [2]]]
+```
+
 ***
 #### 2. np.expand_dims()
-DESC
+Expands the shape of an array by inserting a new axis at the specified position.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example array
+arr = np.array([1, 2, 3, 4])
+
+# Expand the shape by adding a new axis to columns
+expanded_arr = np.expand_dims(arr, axis=0)
+print("Expand Dimensions (Columns) :", expanded_arr, sep="\n", end="\n\n")
+
+# Expand the shape by adding a new axis to rows
+expanded_arr = np.expand_dims(arr, axis=1)
+print("Expand Dimensions (Rows) :", expanded_arr, sep="\n")
 ```
 ##### Output:
 ```plaintext
+Expand Dimensions (Columns) :
+[[1 2 3 4]]
 
+Expand Dimensions (Rows) :
+[[1]
+ [2]
+ [3]
+ [4]]
 ```
 ***
 #### 3. np.squeeze()
-DESC
+Removes single-dimensional entries from the shape of an array.
 
 ##### Code:
 ```python
+import numpy as np
 
+arr = np.array([[[1]],
+                [[2]],
+                [[3]]])
+
+squeezed_arr = np.squeeze(arr)
+print("From :", arr, "\nTo :", squeezed_arr, sep="\n", end=f"\n{'-' * 7}")
+
+# ------------------------------
+
+arr = np.array([[[1],
+                 [2],
+                 [3]]])
+
+squeezed_arr = np.squeeze(arr, axis=0)
+print("From :", arr, "\nTo :", squeezed_arr, sep="\n", end=f"\n{'-' * 7}")
+
+# ------------------------------
+
+arr = np.array([[[1]],
+                [[2]],
+                [[3]]])
+
+squeezed_arr = np.squeeze(arr, axis=1)
+print("From :", arr, "\nTo :", squeezed_arr, sep="\n", end=f"\n{'-' * 7}")
 ```
 ##### Output:
 ```plaintext
+From :
+[[[1]]
+ [[2]]
+ [[3]]]
 
+To :
+[1 2 3]
+-------
+
+From :
+[[[1]
+  [2]
+  [3]]]
+
+To :
+[[1]
+ [2]
+ [3]]
+-------
+
+From :
+[[[1]]
+ [[2]]
+ [[3]]]
+
+To :
+[[1]
+ [2]
+ [3]]
+-------
 ```
 ***
 #### 4. np.swapaxes()
-DESC
+Swaps the two axes of an array.
 
 ##### Code:
 ```python
+import numpy as np
 
+arr = np.arange(24).reshape((2, 3, 4))
+
+# Using np.swapaxes() to transpose the array
+print("Original : ", arr, "-" * 20, sep="\n")
+print("Swap axis0 with axis1 : ", np.swapaxes(arr, 0, 1), "-" * 20, sep="\n", end="\n\n")
+print("Swap axis0 with axis2 : ", np.swapaxes(arr, 0, 2), "-" * 20, sep="\n", end="\n\n")
+print("Transpose The Original Array : ", np.transpose(arr), sep="\n", )
 ```
 ##### Output:
 ```plaintext
+Original : 
+[[[ 0  1  2  3]
+  [ 4  5  6  7]
+  [ 8  9 10 11]]
 
+ [[12 13 14 15]
+  [16 17 18 19]
+  [20 21 22 23]]]
+
+--------------------
+
+Swap axis0 with axis1 : 
+[[[ 0  1  2  3]
+  [12 13 14 15]]
+
+ [[ 4  5  6  7]
+  [16 17 18 19]]
+
+ [[ 8  9 10 11]
+  [20 21 22 23]]]
+
+--------------------
+
+Swap axis0 with axis2 : 
+[[[ 0 12]
+  [ 4 16]
+  [ 8 20]]
+
+ [[ 1 13]
+  [ 5 17]
+  [ 9 21]]
+
+ [[ 2 14]
+  [ 6 18]
+  [10 22]]
+
+ [[ 3 15]
+  [ 7 19]
+  [11 23]]]
+
+--------------------
+
+Transpose The Original Array : 
+[[[ 0 12]
+  [ 4 16]
+  [ 8 20]]
+
+ [[ 1 13]
+  [ 5 17]
+  [ 9 21]]
+
+ [[ 2 14]
+  [ 6 18]
+  [10 22]]
+
+ [[ 3 15]
+  [ 7 19]
+  [11 23]]]
 ```
 ***
 ***
 
-### Polynomial Functions:
+### Polynomial Functions [↑](#Polynomial-Functions):
 
 #### 1. np.poly()
-DESC
+Constructs a polynomial from given coefficients.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Create a polynomial: 1x^2 + 0x - 4
+p = np.poly1d([1, 0, -4])
+
+# Evaluate the polynomial at x = 2, x = 4
+print("When x = 2, Result = ", p(2))  # 2^2 - 4 =  4 - 4 = 0
+print("When x = 4, Result = ", p(4))  # 4^2 - 4 = 16 - 4 = 12
+
+# Find roots of the polynomial
+print("Roots:", p.r)
 ```
 ##### Output:
 ```plaintext
-
+When x = 2, Result =  0
+When x = 4, Result =  12
+Roots: [-2.  2.]
 ```
 ***
 #### 2. np.polyval()
-DESC
+Evaluates a polynomial at specific values.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example polynomial
+poly = np.poly1d([1, -3, 2])  # 1X^2 - 3X + 2
+
+# Evaluate polynomial at specific values
+values = np.array([0,   # 0^2 - 3*0 + 2 =  0 -  0 + 2 = 2
+                   2,   # 2^2 - 3*2 + 2 =  4 -  6 + 2 = 0
+                   4])  # 4^2 - 3*4 + 2 = 16 - 12 + 2 = 6
+result = np.polyval(poly, values)
+print(result)
 ```
 ##### Output:
 ```plaintext
-
+[2 0 6]
 ```
 ***
 #### 3. np.polyfit()
-DESC
+Fits a polynomial of specified degree to given data points.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example data points
+x = np.array([1, 2, 3, 4])
+y = np.array([2, 1, 3, 5])
+
+# Fit a polynomial of degree 2 to the data
+coefficients = np.polyfit(x, y, deg=2)
+print(coefficients)
 ```
 ##### Output:
 ```plaintext
-
+[ 0.75 -2.65  3.75]
 ```
 ***
 #### 4. np.roots()
-DESC
+Computes the roots of a polynomial with given coefficients.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example coefficients
+coefficients = [1, -3, 2]  # X^2 - 3X + 2
+                           # (X - 2)(X - 1) = 0
+                           # X - 2 = 0 -> X = 2
+                           # X - 1 = 0 -> X = 1
+                           # Roots = [2, 1]
+
+# Compute the roots of the polynomial
+roots = np.roots(coefficients)
+print(roots)
 ```
 ##### Output:
 ```plaintext
-
+[2. 1.]
 ```
 ***
 ***
 
-### Statistical Functions:
+### Statistical Functions [↑](#Statistical-Functions):
 
 #### 1. np.histogram()
-DESC
+Computes the histogram of a set of data.
 
-##### Code:
+##### Code1:
 ```python
+import numpy as np
 
+# Example data
+data = np.array([1, 2, 2, 3, 3, 3, 4, 4, 5, 6, 6, 6, 6])
+
+# Compute histogram
+hist, bins = np.histogram(data, bins=5)
+print(hist)
+print(bins)
+```
+##### Output1:
+```plaintext
+[1 2 3 2 5]
+[1. 2. 3. 4. 5. 6.]
+```
+
+##### Code2:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate some random data
+data = np.random.normal(loc=0, scale=1, size=1000)
+
+# Compute the histogram
+counts, bins = np.histogram(data, bins=20)
+
+# Plot the histogram
+plt.hist(data, bins=bins, edgecolor='black')
+plt.title('Histogram of Random Data')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
 ```
 ##### Output:
-```plaintext
+IMAGE URL
 
-```
 ***
 #### 2. np.bincount()
-DESC
+Count occurrences of non-negative integers.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example data
+data = np.array([1, 2, 2, 3, 3, 3, 4, 4, 5, 6, 6, 6, 6])
+
+# Count occurrences
+counts = np.bincount(data)
+print(counts)
 ```
 ##### Output:
 ```plaintext
-
+[0 1 2 3 2 1 4]
 ```
 ***
 #### 3. np.percentile()
-DESC
+Compute the q-th percentile of the data.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example data
+data = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# Compute the 50th percentile (median)
+percentile = np.percentile(data, 50)
+print(percentile)
 ```
 ##### Output:
 ```plaintext
-
+5.5
 ```
 ***
 #### 4. np.corrcoef()
-DESC
+Compute the correlation coefficient matrix.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Generate sample arrays x and y
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 3, 4, 5, 6])
+
+# Compute the correlation coefficient between x and y
+correlation_coefficient = np.corrcoef(x, y)[0, 1]
+
+print("Correlation Coefficient between x and y: ", correlation_coefficient)
 ```
 ##### Output:
 ```plaintext
-
+Correlation Coefficient between x and y: 0.9999999999999999
 ```
 ***
 ***
 
-### Fourier Transformations:
+### Fourier Transformations [↑](#Fourier-Transformations):
 
 #### 1. np.fft.fft()
-DESC
+Computes the one-dimensional discrete Fourier Transform.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example data
+data = np.array([1.0, 2.0, 1.0, -1.0, 1.5])
+
+# Compute the Fourier Transform
+fft_result = np.fft.fft(data)
+print(fft_result)
 ```
 ##### Output:
 ```plaintext
-
+[ 4.5       +0.j          2.08155948-1.65109876j -1.83155948+1.60822041j
+ -1.83155948-1.60822041j  2.08155948+1.65109876j]
 ```
 ***
 #### 2. np.fft.ifft()
-DESC
+Computes the one-dimensional inverse discrete Fourier Transform.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example data
+data = np.array([1.0, 2.0, 1.0, -1.0, 1.5])
+
+# Compute the inverse Fourier Transform
+ifft_result = np.fft.ifft(data)
+print(ifft_result)
 ```
 ##### Output:
 ```plaintext
-
+[ 0.9+0.j   0.4+0.5j  0.1+0.j   0.4-0.5j  0.9+0.j ]
 ```
 ***
 #### 3. np.fft.fftfreq()
-DESC
+Computes the sample frequencies for the FFT of a given length.
 
 ##### Code:
 ```python
+import numpy as np
 
+# Example data length
+n = 10
+
+# Compute the sample frequencies
+freqs = np.fft.fftfreq(n, d=0.1)
+print(freqs)
 ```
 ##### Output:
 ```plaintext
-
+[ 0.   1.   2.   3.   4.  -5.  -4.  -3.  -2.  -1. ]
 ```
 ***
 ***
 
-### Other Utilities:
+### Other Utilities [↑](#Other-Utilities):
 
-#### 1. +
-DESC
-
-##### Code:
-```python
-
-```
-##### Output:
-```plaintext
-
-```
-***
-#### 2. -
-DESC
-
-##### Code:
-```python
-
-```
-##### Output:
-```plaintext
-
-```
-***
-#### 3. *
-DESC
-
-##### Code:
-```python
-
-```
-##### Output:
-```plaintext
-
-```
-***
-#### 4. /
-DESC
-
-##### Code:
-```python
-
-```
-##### Output:
-```plaintext
-
-```
-***
